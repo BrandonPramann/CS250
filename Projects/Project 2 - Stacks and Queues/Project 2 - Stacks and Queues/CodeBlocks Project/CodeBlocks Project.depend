@@ -1,0 +1,68 @@
+# depslib dependency file v1.0
+1507695659 source:/home/rayechell/TEACHING/cs250/cs-250-private-files/Projects 2017-08/Project 2 - Stacks and Queues/Project 2 - Stacks and Queues/AirTravelSimulator.cpp
+	"AirTravelSimulator.hpp"
+
+1507696119 /home/rayechell/TEACHING/cs250/cs-250-private-files/Projects 2017-08/Project 2 - Stacks and Queues/Project 2 - Stacks and Queues/AirTravelSimulator.hpp
+	<vector>
+	"TravellerManager.hpp"
+	"Airplane.hpp"
+	"Airport.hpp"
+	"States.hpp"
+	"DataStructures/LinkedList.hpp"
+
+1507697458 /home/rayechell/TEACHING/cs250/cs-250-private-files/Projects 2017-08/Project 2 - Stacks and Queues/Project 2 - Stacks and Queues/TravellerManager.hpp
+	<fstream>
+	<string>
+	"Traveller.hpp"
+
+1507696144 /home/rayechell/TEACHING/cs250/cs-250-private-files/Projects 2017-08/Project 2 - Stacks and Queues/Project 2 - Stacks and Queues/Traveller.hpp
+	<string>
+	"States.hpp"
+
+1507693208 /home/rayechell/TEACHING/cs250/cs-250-private-files/Projects 2017-08/Project 2 - Stacks and Queues/Project 2 - Stacks and Queues/States.hpp
+
+1507695994 /home/rayechell/TEACHING/cs250/cs-250-private-files/Projects 2017-08/Project 2 - Stacks and Queues/Project 2 - Stacks and Queues/Airplane.hpp
+	<iostream>
+	<string>
+	<cstdlib>
+	<fstream>
+	<stack>
+	<queue>
+	<iomanip>
+	"Traveller.hpp"
+	"DataStructures/Stack.hpp"
+
+1507696031 /home/rayechell/TEACHING/cs250/cs-250-private-files/Projects 2017-08/Project 2 - Stacks and Queues/Project 2 - Stacks and Queues/Airport.hpp
+	<iostream>
+	<cstdlib>
+	<stack>
+	<queue>
+	<iomanip>
+	"Traveller.hpp"
+	"DataStructures/Queue.hpp"
+
+1507693208 source:/home/rayechell/TEACHING/cs250/cs-250-private-files/Projects 2017-08/Project 2 - Stacks and Queues/Project 2 - Stacks and Queues/main.cpp
+	<iostream>
+	<cstdlib>
+	<ctime>
+	<iomanip>
+	<cstdio>
+	"AirTravelSimulator.hpp"
+
+1507695930 /home/rayechell/TEACHING/cs250/cs-250-private-files/Projects 2017-08/Project 2 - Stacks and Queues/Project 2 - Stacks and Queues/DataStructures/Stack.hpp
+	"LinkedList.hpp"
+
+1507695939 /home/rayechell/TEACHING/cs250/cs-250-private-files/Projects 2017-08/Project 2 - Stacks and Queues/Project 2 - Stacks and Queues/DataStructures/Queue.hpp
+	"LinkedList.hpp"
+
+1507695968 /home/rayechell/TEACHING/cs250/cs-250-private-files/Projects 2017-08/Project 2 - Stacks and Queues/Project 2 - Stacks and Queues/DataStructures/LinkedList.hpp
+	<iostream>
+	<string>
+	<stdexcept>
+
+1507696529 source:/home/rayechell/TEACHING/cs250/cs-250-private-files/Projects 2017-08/Project 2 - Stacks and Queues/Project 2 - Stacks and Queues/Airplane.cpp
+	"Airplane.hpp"
+
+1507696946 source:/home/rayechell/TEACHING/cs250/cs-250-private-files/Projects 2017-08/Project 2 - Stacks and Queues/Project 2 - Stacks and Queues/Airport.cpp
+	"Airport.hpp"
+

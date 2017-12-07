@@ -1,0 +1,22 @@
+digraph "AirTravelSimulator"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="AirTravelSimulator",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" m_airport" ];
+  Node2 [label="Airport",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classAirport.html",tooltip="Airport structure that has a \"waiting room\" and a Line to prepare for boarding. "];
+  Node3 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" m_pplManager" ];
+  Node3 [label="TravellerManager",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classTravellerManager.html",tooltip="A structure that contains the list of all travellers to keep up with (DONE) "];
+  Node4 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" m_passengers" ];
+  Node4 [label="Traveller",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structTraveller.html",tooltip="Traveller structure which contains a name, waiting time, and state. "];
+  Node5 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" m_ptrTravellers" ];
+  Node5 [label="LinkedList\< Traveller * \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classLinkedList.html"];
+  Node6 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" m_ptrLast\nm_ptrFirst" ];
+  Node6 [label="Node\< Traveller * \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structNode.html"];
+  Node7 -> Node6 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" m_ptrPrev\nm_ptrNext" ];
+  Node7 [label="Node\< T \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structNode.html",tooltip="Node structure for LinkedList. "];
+  Node7 -> Node7 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" m_ptrPrev\nm_ptrNext" ];
+  Node4 -> Node6 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" m_data" ];
+  Node8 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" m_airplane" ];
+  Node8 [label="Airplane",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classAirplane.html",tooltip="Airplane structure that has Board and Disembark functionality. "];
+}

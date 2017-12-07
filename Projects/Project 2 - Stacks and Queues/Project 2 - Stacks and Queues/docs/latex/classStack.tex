@@ -1,0 +1,152 @@
+\hypertarget{classStack}{}\section{Stack$<$ T $>$ Class Template Reference}
+\label{classStack}\index{Stack$<$ T $>$@{Stack$<$ T $>$}}
+
+
+A L\+I\+FO template data structure; inherits from \hyperlink{classLinkedList}{Linked\+List}.  
+
+
+
+
+{\ttfamily \#include $<$Stack.\+hpp$>$}
+
+
+
+Inheritance diagram for Stack$<$ T $>$\+:
+% FIG 0
+
+
+Collaboration diagram for Stack$<$ T $>$\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classStack_aefee698059467258bbd79045aca62a63}{Stack} ()
+\begin{DoxyCompactList}\small\item\em Initializes the \hyperlink{classStack}{Stack}. \end{DoxyCompactList}\item 
+void \hyperlink{classStack_a834448898d90c3e34d83cd281f014c29}{Push} (T \&new\+Item)
+\begin{DoxyCompactList}\small\item\em Adds a new item to the top of the \hyperlink{classStack}{Stack}. \end{DoxyCompactList}\item 
+void \hyperlink{classStack_a197a49c3d95c29649cf35f756999c612}{Pop} ()
+\begin{DoxyCompactList}\small\item\em Removes the top-\/most item. \end{DoxyCompactList}\item 
+T \& \hyperlink{classStack_a5f32282a27e73107035201f6a5568822}{Top} ()
+\begin{DoxyCompactList}\small\item\em Returns the top-\/most item. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\\*
+class Stack$<$ T $>$}
+
+A L\+I\+FO template data structure; inherits from \hyperlink{classLinkedList}{Linked\+List}. 
+
+Definition at line 8 of file Stack.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Stack@{Stack}!Stack@{Stack}}
+\index{Stack@{Stack}!Stack@{Stack}}
+\subsubsection[{\texorpdfstring{Stack()}{Stack()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf Stack}$<$ T $>$\+::{\bf Stack} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classStack_aefee698059467258bbd79045aca62a63}{}\label{classStack_aefee698059467258bbd79045aca62a63}
+
+
+Initializes the \hyperlink{classStack}{Stack}. 
+
+Nothing needs to be added in here; it will already call the \hyperlink{classLinkedList}{Linked\+List}\textquotesingle{}s constructor. 
+
+Definition at line 16 of file Stack.\+hpp.
+
+
+\begin{DoxyCode}
+16             : \hyperlink{classLinkedList}{LinkedList<T>}()
+17     \{
+18     \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{Stack@{Stack}!Pop@{Pop}}
+\index{Pop@{Pop}!Stack@{Stack}}
+\subsubsection[{\texorpdfstring{Pop()}{Pop()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void {\bf Stack}$<$ T $>$\+::Pop (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classStack_a197a49c3d95c29649cf35f756999c612}{}\label{classStack_a197a49c3d95c29649cf35f756999c612}
+
+
+Removes the top-\/most item. 
+
+Calls the Pop\+Back function from \hyperlink{classLinkedList}{Linked\+List}.
+
+\begin{DoxyReturn}{Returns}
+$<$void$>$ 
+\end{DoxyReturn}
+
+
+Definition at line 37 of file Stack.\+hpp.
+
+
+\begin{DoxyCode}
+38     \{
+39     \}
+\end{DoxyCode}
+\index{Stack@{Stack}!Push@{Push}}
+\index{Push@{Push}!Stack@{Stack}}
+\subsubsection[{\texorpdfstring{Push(\+T \&new\+Item)}{Push(T &newItem)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void {\bf Stack}$<$ T $>$\+::Push (
+\begin{DoxyParamCaption}
+\item[{T \&}]{new\+Item}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classStack_a834448898d90c3e34d83cd281f014c29}{}\label{classStack_a834448898d90c3e34d83cd281f014c29}
+
+
+Adds a new item to the top of the \hyperlink{classStack}{Stack}. 
+
+New item to add to the \hyperlink{classLinkedList}{Linked\+List} via the Push\+Back function.
+
+
+\begin{DoxyParams}{Parameters}
+{\em $<$\+T\&$>$} & new\+Item \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+$<$void$>$ 
+\end{DoxyReturn}
+
+
+Definition at line 27 of file Stack.\+hpp.
+
+
+\begin{DoxyCode}
+28     \{
+29     \}
+\end{DoxyCode}
+\index{Stack@{Stack}!Top@{Top}}
+\index{Top@{Top}!Stack@{Stack}}
+\subsubsection[{\texorpdfstring{Top()}{Top()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ T\& {\bf Stack}$<$ T $>$\+::Top (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classStack_a5f32282a27e73107035201f6a5568822}{}\label{classStack_a5f32282a27e73107035201f6a5568822}
+
+
+Returns the top-\/most item. 
+
+Returns the top-\/most item by using Get\+Back from the \hyperlink{classLinkedList}{Linked\+List}.
+
+\begin{DoxyReturn}{Returns}
+$<$T\&$>$ 
+\end{DoxyReturn}
+
+
+Definition at line 47 of file Stack.\+hpp.
+
+
+\begin{DoxyCode}
+48     \{
+49     \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Data\+Structures/\hyperlink{Stack_8hpp}{Stack.\+hpp}\end{DoxyCompactItemize}

@@ -1,0 +1,536 @@
+\hypertarget{classSmartDynamicArray}{}\section{Smart\+Dynamic\+Array$<$ T $>$ Class Template Reference}
+\label{classSmartDynamicArray}\index{Smart\+Dynamic\+Array$<$ T $>$@{Smart\+Dynamic\+Array$<$ T $>$}}
+
+
+{\ttfamily \#include $<$Smart\+Dynamic\+Array.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classSmartDynamicArray_a0d72987244de8430d00a79a90e62c870}{Smart\+Dynamic\+Array} ()
+\item 
+\hyperlink{classSmartDynamicArray_af5e45116a460a84181a4672d7ffe1c17}{$\sim$\+Smart\+Dynamic\+Array} ()
+\item 
+void \hyperlink{classSmartDynamicArray_a9d69a8736ff3b35dde79883cde0a1ac7}{Push} (const string \&new\+Item)
+\item 
+void \hyperlink{classSmartDynamicArray_a692947b7e142df4d668ee4f36054323d}{Pop} ()
+\item 
+string \hyperlink{classSmartDynamicArray_ae8091301e4b5544dfaeeb4e0100882ec}{Get} (int index) const 
+\item 
+void \hyperlink{classSmartDynamicArray_aacf939cf6279e03a213ed691b8a6aa5d}{Resize} ()
+\item 
+void \hyperlink{classSmartDynamicArray_a1bfa64ae55ca6f156e2a5a2263243c0d}{Resize} (int new\+Size)
+\item 
+int \hyperlink{classSmartDynamicArray_a67711ddeea4b0b86bd976359ca323114}{Size} () const 
+\item 
+bool \hyperlink{classSmartDynamicArray_a7ba080a321b6b821b6a4fc439f00da79}{Is\+Full} () const 
+\item 
+bool \hyperlink{classSmartDynamicArray_a55d1b117544593dcbbd98ae37dfd9141}{Is\+Empty} () const 
+\item 
+string \hyperlink{classSmartDynamicArray_a69370eb1ced09b716ec2f24809a5f795}{operator\mbox{[}$\,$\mbox{]}} (int index)
+\item 
+\hyperlink{classSmartDynamicArray}{Smart\+Dynamic\+Array} \& \hyperlink{classSmartDynamicArray_ad7f55bcfbd7121f540d4b7540bd7bcb3}{operator=} (const \hyperlink{classSmartDynamicArray}{Smart\+Dynamic\+Array} \&other)
+\item 
+bool \hyperlink{classSmartDynamicArray_a1b0a308ff5b6f4dcf4befcad78bbd919}{operator==} (const \hyperlink{classSmartDynamicArray}{Smart\+Dynamic\+Array} \&other)
+\item 
+bool \hyperlink{classSmartDynamicArray_ac0c6613cdf637eac9ecff5f12cbd264e}{operator!=} (const \hyperlink{classSmartDynamicArray}{Smart\+Dynamic\+Array} \&other)
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classSmartDynamicArray_ac2a448df0eff2b98f92715d8eed2870b}{Shift\+Right} (int index)
+\item 
+void \hyperlink{classSmartDynamicArray_a40c441e0e56ed5a738ff78d9f8847e43}{Shift\+Left} (int index)
+\item 
+bool \hyperlink{classSmartDynamicArray_ab08071c6bafb56671a42b37491ede24b}{Is\+Invalid\+Index} (int index) const 
+\item 
+bool \hyperlink{classSmartDynamicArray_af2c9ea098a97459f6ca355beddebf5a3}{Is\+Non\+Contiguous\+Index} (int index) const 
+\item 
+void \hyperlink{classSmartDynamicArray_ab13fbc825bbeef7f5157ab4daf379a85}{Allocate\+Memory} ()
+\item 
+void \hyperlink{classSmartDynamicArray_ae774f7bdf97aac3accdb8ea2d035b9f5}{Allocate\+Memory} (int new\+Size)
+\item 
+void \hyperlink{classSmartDynamicArray_abdedcf773e4fe2fed4e3bcb40fa93914}{Deallocate\+Memory} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+T $\ast$ \hyperlink{classSmartDynamicArray_a5c85d1791982c4366cd7f01b973aadb4}{m\+\_\+data}
+\item 
+int \hyperlink{classSmartDynamicArray_a132e6ffa1678a3ef2eafad1195df82e4}{m\+\_\+item\+Count}
+\item 
+int \hyperlink{classSmartDynamicArray_a57e2d12b656b0aa81f21a8a805f3acf1}{m\+\_\+array\+Size}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\\*
+class Smart\+Dynamic\+Array$<$ T $>$}
+
+
+
+Definition at line 10 of file Smart\+Dynamic\+Array.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Smart\+Dynamic\+Array@{Smart\+Dynamic\+Array}!Smart\+Dynamic\+Array@{Smart\+Dynamic\+Array}}
+\index{Smart\+Dynamic\+Array@{Smart\+Dynamic\+Array}!Smart\+Dynamic\+Array@{Smart\+Dynamic\+Array}}
+\subsubsection[{\texorpdfstring{Smart\+Dynamic\+Array()}{SmartDynamicArray()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf Smart\+Dynamic\+Array}$<$ T $>$\+::{\bf Smart\+Dynamic\+Array} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classSmartDynamicArray_a0d72987244de8430d00a79a90e62c870}{}\label{classSmartDynamicArray_a0d72987244de8430d00a79a90e62c870}
+
+
+Definition at line 13 of file Smart\+Dynamic\+Array.\+hpp.
+
+
+\begin{DoxyCode}
+14     \{
+15         \hyperlink{classSmartDynamicArray_a132e6ffa1678a3ef2eafad1195df82e4}{m\_itemCount} = 0;
+16         \hyperlink{classSmartDynamicArray_a57e2d12b656b0aa81f21a8a805f3acf1}{m\_arraySize} = 0;
+17         \hyperlink{classSmartDynamicArray_a5c85d1791982c4366cd7f01b973aadb4}{m\_data} = \textcolor{keyword}{nullptr};
+18     \}
+\end{DoxyCode}
+\index{Smart\+Dynamic\+Array@{Smart\+Dynamic\+Array}!````~Smart\+Dynamic\+Array@{$\sim$\+Smart\+Dynamic\+Array}}
+\index{````~Smart\+Dynamic\+Array@{$\sim$\+Smart\+Dynamic\+Array}!Smart\+Dynamic\+Array@{Smart\+Dynamic\+Array}}
+\subsubsection[{\texorpdfstring{$\sim$\+Smart\+Dynamic\+Array()}{~SmartDynamicArray()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf Smart\+Dynamic\+Array}$<$ T $>$\+::$\sim${\bf Smart\+Dynamic\+Array} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classSmartDynamicArray_af5e45116a460a84181a4672d7ffe1c17}{}\label{classSmartDynamicArray_af5e45116a460a84181a4672d7ffe1c17}
+
+
+Definition at line 20 of file Smart\+Dynamic\+Array.\+hpp.
+
+
+\begin{DoxyCode}
+21     \{
+22         \hyperlink{classSmartDynamicArray_abdedcf773e4fe2fed4e3bcb40fa93914}{DeallocateMemory}();
+23     \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{Smart\+Dynamic\+Array@{Smart\+Dynamic\+Array}!Allocate\+Memory@{Allocate\+Memory}}
+\index{Allocate\+Memory@{Allocate\+Memory}!Smart\+Dynamic\+Array@{Smart\+Dynamic\+Array}}
+\subsubsection[{\texorpdfstring{Allocate\+Memory()}{AllocateMemory()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void {\bf Smart\+Dynamic\+Array}$<$ T $>$\+::Allocate\+Memory (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}\hypertarget{classSmartDynamicArray_ab13fbc825bbeef7f5157ab4daf379a85}{}\label{classSmartDynamicArray_ab13fbc825bbeef7f5157ab4daf379a85}
+
+
+Definition at line 171 of file Smart\+Dynamic\+Array.\+hpp.
+
+
+\begin{DoxyCode}
+172     \{
+173         \hyperlink{classSmartDynamicArray_ab13fbc825bbeef7f5157ab4daf379a85}{AllocateMemory}( 10 );
+174     \}
+\end{DoxyCode}
+\index{Smart\+Dynamic\+Array@{Smart\+Dynamic\+Array}!Allocate\+Memory@{Allocate\+Memory}}
+\index{Allocate\+Memory@{Allocate\+Memory}!Smart\+Dynamic\+Array@{Smart\+Dynamic\+Array}}
+\subsubsection[{\texorpdfstring{Allocate\+Memory(int new\+Size)}{AllocateMemory(int newSize)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void {\bf Smart\+Dynamic\+Array}$<$ T $>$\+::Allocate\+Memory (
+\begin{DoxyParamCaption}
+\item[{int}]{new\+Size}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}\hypertarget{classSmartDynamicArray_ae774f7bdf97aac3accdb8ea2d035b9f5}{}\label{classSmartDynamicArray_ae774f7bdf97aac3accdb8ea2d035b9f5}
+
+
+Definition at line 176 of file Smart\+Dynamic\+Array.\+hpp.
+
+
+\begin{DoxyCode}
+177     \{
+178         \textcolor{keywordflow}{if} ( \hyperlink{classSmartDynamicArray_a5c85d1791982c4366cd7f01b973aadb4}{m\_data} == \textcolor{keyword}{nullptr} )
+179         \{
+180             \hyperlink{classSmartDynamicArray_a57e2d12b656b0aa81f21a8a805f3acf1}{m\_arraySize} = newSize;
+181             \hyperlink{classSmartDynamicArray_a132e6ffa1678a3ef2eafad1195df82e4}{m\_itemCount} = 0;
+182             \hyperlink{classSmartDynamicArray_a5c85d1791982c4366cd7f01b973aadb4}{m\_data} = \textcolor{keyword}{new} T[ \hyperlink{classSmartDynamicArray_a57e2d12b656b0aa81f21a8a805f3acf1}{m\_arraySize} ];
+183         \}
+184         \textcolor{keywordflow}{else}
+185         \{
+186             \textcolor{keywordflow}{throw} logic\_error( \textcolor{stringliteral}{"Cannot allocate memory - pointer already pointing to a memory address!"} );
+187         \}
+188     \}
+\end{DoxyCode}
+\index{Smart\+Dynamic\+Array@{Smart\+Dynamic\+Array}!Deallocate\+Memory@{Deallocate\+Memory}}
+\index{Deallocate\+Memory@{Deallocate\+Memory}!Smart\+Dynamic\+Array@{Smart\+Dynamic\+Array}}
+\subsubsection[{\texorpdfstring{Deallocate\+Memory()}{DeallocateMemory()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void {\bf Smart\+Dynamic\+Array}$<$ T $>$\+::Deallocate\+Memory (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}\hypertarget{classSmartDynamicArray_abdedcf773e4fe2fed4e3bcb40fa93914}{}\label{classSmartDynamicArray_abdedcf773e4fe2fed4e3bcb40fa93914}
+
+
+Definition at line 190 of file Smart\+Dynamic\+Array.\+hpp.
+
+
+\begin{DoxyCode}
+191     \{
+192         \textcolor{keywordflow}{if} ( \hyperlink{classSmartDynamicArray_a5c85d1791982c4366cd7f01b973aadb4}{m\_data} != \textcolor{keyword}{nullptr} )
+193         \{
+194             \textcolor{keyword}{delete} [] \hyperlink{classSmartDynamicArray_a5c85d1791982c4366cd7f01b973aadb4}{m\_data};
+195             \hyperlink{classSmartDynamicArray_a5c85d1791982c4366cd7f01b973aadb4}{m\_data} = \textcolor{keyword}{nullptr};
+196         \}
+197     \}
+\end{DoxyCode}
+\index{Smart\+Dynamic\+Array@{Smart\+Dynamic\+Array}!Get@{Get}}
+\index{Get@{Get}!Smart\+Dynamic\+Array@{Smart\+Dynamic\+Array}}
+\subsubsection[{\texorpdfstring{Get(int index) const }{Get(int index) const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ string {\bf Smart\+Dynamic\+Array}$<$ T $>$\+::Get (
+\begin{DoxyParamCaption}
+\item[{int}]{index}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classSmartDynamicArray_ae8091301e4b5544dfaeeb4e0100882ec}{}\label{classSmartDynamicArray_ae8091301e4b5544dfaeeb4e0100882ec}
+
+
+Definition at line 49 of file Smart\+Dynamic\+Array.\+hpp.
+
+
+\begin{DoxyCode}
+50     \{
+51         \textcolor{keywordflow}{if} ( \hyperlink{classSmartDynamicArray_ab08071c6bafb56671a42b37491ede24b}{IsInvalidIndex}( index ) || \hyperlink{classSmartDynamicArray_af2c9ea098a97459f6ca355beddebf5a3}{IsNonContiguousIndex}( index ) )
+52         \{
+53             \textcolor{keywordflow}{throw} out\_of\_range( \textcolor{stringliteral}{"Cannot get at index - out of range"} );
+54         \}
+55 
+56         \textcolor{keywordflow}{return} \hyperlink{classSmartDynamicArray_a5c85d1791982c4366cd7f01b973aadb4}{m\_data}[ index ];
+57     \}
+\end{DoxyCode}
+\index{Smart\+Dynamic\+Array@{Smart\+Dynamic\+Array}!Is\+Empty@{Is\+Empty}}
+\index{Is\+Empty@{Is\+Empty}!Smart\+Dynamic\+Array@{Smart\+Dynamic\+Array}}
+\subsubsection[{\texorpdfstring{Is\+Empty() const }{IsEmpty() const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ bool {\bf Smart\+Dynamic\+Array}$<$ T $>$\+::Is\+Empty (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classSmartDynamicArray_a55d1b117544593dcbbd98ae37dfd9141}{}\label{classSmartDynamicArray_a55d1b117544593dcbbd98ae37dfd9141}
+
+
+Definition at line 101 of file Smart\+Dynamic\+Array.\+hpp.
+
+
+\begin{DoxyCode}
+102     \{
+103         \textcolor{keywordflow}{return} ( \hyperlink{classSmartDynamicArray_a132e6ffa1678a3ef2eafad1195df82e4}{m\_itemCount} == 0 );
+104     \}
+\end{DoxyCode}
+\index{Smart\+Dynamic\+Array@{Smart\+Dynamic\+Array}!Is\+Full@{Is\+Full}}
+\index{Is\+Full@{Is\+Full}!Smart\+Dynamic\+Array@{Smart\+Dynamic\+Array}}
+\subsubsection[{\texorpdfstring{Is\+Full() const }{IsFull() const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ bool {\bf Smart\+Dynamic\+Array}$<$ T $>$\+::Is\+Full (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classSmartDynamicArray_a7ba080a321b6b821b6a4fc439f00da79}{}\label{classSmartDynamicArray_a7ba080a321b6b821b6a4fc439f00da79}
+
+
+Definition at line 96 of file Smart\+Dynamic\+Array.\+hpp.
+
+
+\begin{DoxyCode}
+97     \{
+98         \textcolor{keywordflow}{return} ( \hyperlink{classSmartDynamicArray_a132e6ffa1678a3ef2eafad1195df82e4}{m\_itemCount} == \hyperlink{classSmartDynamicArray_a57e2d12b656b0aa81f21a8a805f3acf1}{m\_arraySize} );
+99     \}
+\end{DoxyCode}
+\index{Smart\+Dynamic\+Array@{Smart\+Dynamic\+Array}!Is\+Invalid\+Index@{Is\+Invalid\+Index}}
+\index{Is\+Invalid\+Index@{Is\+Invalid\+Index}!Smart\+Dynamic\+Array@{Smart\+Dynamic\+Array}}
+\subsubsection[{\texorpdfstring{Is\+Invalid\+Index(int index) const }{IsInvalidIndex(int index) const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ bool {\bf Smart\+Dynamic\+Array}$<$ T $>$\+::Is\+Invalid\+Index (
+\begin{DoxyParamCaption}
+\item[{int}]{index}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}\hypertarget{classSmartDynamicArray_ab08071c6bafb56671a42b37491ede24b}{}\label{classSmartDynamicArray_ab08071c6bafb56671a42b37491ede24b}
+
+
+Definition at line 161 of file Smart\+Dynamic\+Array.\+hpp.
+
+
+\begin{DoxyCode}
+162     \{
+163         \textcolor{keywordflow}{return} ( index < 0 );
+164     \}
+\end{DoxyCode}
+\index{Smart\+Dynamic\+Array@{Smart\+Dynamic\+Array}!Is\+Non\+Contiguous\+Index@{Is\+Non\+Contiguous\+Index}}
+\index{Is\+Non\+Contiguous\+Index@{Is\+Non\+Contiguous\+Index}!Smart\+Dynamic\+Array@{Smart\+Dynamic\+Array}}
+\subsubsection[{\texorpdfstring{Is\+Non\+Contiguous\+Index(int index) const }{IsNonContiguousIndex(int index) const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ bool {\bf Smart\+Dynamic\+Array}$<$ T $>$\+::Is\+Non\+Contiguous\+Index (
+\begin{DoxyParamCaption}
+\item[{int}]{index}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}\hypertarget{classSmartDynamicArray_af2c9ea098a97459f6ca355beddebf5a3}{}\label{classSmartDynamicArray_af2c9ea098a97459f6ca355beddebf5a3}
+
+
+Definition at line 166 of file Smart\+Dynamic\+Array.\+hpp.
+
+
+\begin{DoxyCode}
+167     \{
+168         \textcolor{keywordflow}{return} ( index > \hyperlink{classSmartDynamicArray_a132e6ffa1678a3ef2eafad1195df82e4}{m\_itemCount} );
+169     \}
+\end{DoxyCode}
+\index{Smart\+Dynamic\+Array@{Smart\+Dynamic\+Array}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!Smart\+Dynamic\+Array@{Smart\+Dynamic\+Array}}
+\subsubsection[{\texorpdfstring{operator"!=(const Smart\+Dynamic\+Array \&other)}{operator!=(const SmartDynamicArray &other)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ bool {\bf Smart\+Dynamic\+Array}$<$ T $>$\+::operator!= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Smart\+Dynamic\+Array}$<$ T $>$ \&}]{other}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classSmartDynamicArray_ac0c6613cdf637eac9ecff5f12cbd264e}{}\label{classSmartDynamicArray_ac0c6613cdf637eac9ecff5f12cbd264e}
+
+
+Definition at line 138 of file Smart\+Dynamic\+Array.\+hpp.
+
+
+\begin{DoxyCode}
+139     \{
+140         \textcolor{keywordflow}{return} !( *\textcolor{keyword}{this} == other );
+141     \}
+\end{DoxyCode}
+\index{Smart\+Dynamic\+Array@{Smart\+Dynamic\+Array}!operator=@{operator=}}
+\index{operator=@{operator=}!Smart\+Dynamic\+Array@{Smart\+Dynamic\+Array}}
+\subsubsection[{\texorpdfstring{operator=(const Smart\+Dynamic\+Array \&other)}{operator=(const SmartDynamicArray &other)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf Smart\+Dynamic\+Array}\& {\bf Smart\+Dynamic\+Array}$<$ T $>$\+::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Smart\+Dynamic\+Array}$<$ T $>$ \&}]{other}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classSmartDynamicArray_ad7f55bcfbd7121f540d4b7540bd7bcb3}{}\label{classSmartDynamicArray_ad7f55bcfbd7121f540d4b7540bd7bcb3}
+
+
+Definition at line 109 of file Smart\+Dynamic\+Array.\+hpp.
+
+
+\begin{DoxyCode}
+110     \{
+111         \textcolor{keywordflow}{for} ( \textcolor{keywordtype}{int} i = 0; i < other.\hyperlink{classSmartDynamicArray_a132e6ffa1678a3ef2eafad1195df82e4}{m\_itemCount}; i++ )
+112         \{
+113             \hyperlink{classSmartDynamicArray_a5c85d1791982c4366cd7f01b973aadb4}{m\_data}[i] = other.\hyperlink{classSmartDynamicArray_a5c85d1791982c4366cd7f01b973aadb4}{m\_data}[i];
+114             \hyperlink{classSmartDynamicArray_a132e6ffa1678a3ef2eafad1195df82e4}{m\_itemCount}++;
+115         \}
+116 
+117         \textcolor{keywordflow}{return} *\textcolor{keyword}{this};
+118     \}
+\end{DoxyCode}
+\index{Smart\+Dynamic\+Array@{Smart\+Dynamic\+Array}!operator==@{operator==}}
+\index{operator==@{operator==}!Smart\+Dynamic\+Array@{Smart\+Dynamic\+Array}}
+\subsubsection[{\texorpdfstring{operator==(const Smart\+Dynamic\+Array \&other)}{operator==(const SmartDynamicArray &other)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ bool {\bf Smart\+Dynamic\+Array}$<$ T $>$\+::operator== (
+\begin{DoxyParamCaption}
+\item[{const {\bf Smart\+Dynamic\+Array}$<$ T $>$ \&}]{other}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classSmartDynamicArray_a1b0a308ff5b6f4dcf4befcad78bbd919}{}\label{classSmartDynamicArray_a1b0a308ff5b6f4dcf4befcad78bbd919}
+
+
+Definition at line 120 of file Smart\+Dynamic\+Array.\+hpp.
+
+
+\begin{DoxyCode}
+121     \{
+122         \textcolor{keywordflow}{if} ( \hyperlink{classSmartDynamicArray_a132e6ffa1678a3ef2eafad1195df82e4}{m\_itemCount} != other.\hyperlink{classSmartDynamicArray_a132e6ffa1678a3ef2eafad1195df82e4}{m\_itemCount} )
+123         \{
+124             \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+125         \}
+126 
+127         \textcolor{keywordflow}{for} ( \textcolor{keywordtype}{int} i = 0; i < \hyperlink{classSmartDynamicArray_a132e6ffa1678a3ef2eafad1195df82e4}{m\_itemCount}; i++ )
+128         \{
+129             \textcolor{keywordflow}{if} ( \hyperlink{classSmartDynamicArray_a5c85d1791982c4366cd7f01b973aadb4}{m\_data}[i] != other.\hyperlink{classSmartDynamicArray_a5c85d1791982c4366cd7f01b973aadb4}{m\_data}[i] )
+130             \{
+131                 \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+132             \}
+133         \}
+134 
+135         \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+136     \}
+\end{DoxyCode}
+\index{Smart\+Dynamic\+Array@{Smart\+Dynamic\+Array}!operator\mbox{[}$\,$\mbox{]}@{operator[]}}
+\index{operator\mbox{[}$\,$\mbox{]}@{operator[]}!Smart\+Dynamic\+Array@{Smart\+Dynamic\+Array}}
+\subsubsection[{\texorpdfstring{operator[](int index)}{operator[](int index)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ string {\bf Smart\+Dynamic\+Array}$<$ T $>$\+::operator\mbox{[}$\,$\mbox{]} (
+\begin{DoxyParamCaption}
+\item[{int}]{index}
+\end{DoxyParamCaption}
+)}\hypertarget{classSmartDynamicArray_a69370eb1ced09b716ec2f24809a5f795}{}\label{classSmartDynamicArray_a69370eb1ced09b716ec2f24809a5f795}
+\index{Smart\+Dynamic\+Array@{Smart\+Dynamic\+Array}!Pop@{Pop}}
+\index{Pop@{Pop}!Smart\+Dynamic\+Array@{Smart\+Dynamic\+Array}}
+\subsubsection[{\texorpdfstring{Pop()}{Pop()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void {\bf Smart\+Dynamic\+Array}$<$ T $>$\+::Pop (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classSmartDynamicArray_a692947b7e142df4d668ee4f36054323d}{}\label{classSmartDynamicArray_a692947b7e142df4d668ee4f36054323d}
+
+
+Definition at line 40 of file Smart\+Dynamic\+Array.\+hpp.
+
+
+\begin{DoxyCode}
+41     \{
+42         \textcolor{keywordflow}{if} ( \hyperlink{classSmartDynamicArray_a132e6ffa1678a3ef2eafad1195df82e4}{m\_itemCount} > 0 )
+43         \{
+44             \textcolor{comment}{// Lazy delete}
+45             \hyperlink{classSmartDynamicArray_a132e6ffa1678a3ef2eafad1195df82e4}{m\_itemCount}--;
+46         \}
+47     \}
+\end{DoxyCode}
+\index{Smart\+Dynamic\+Array@{Smart\+Dynamic\+Array}!Push@{Push}}
+\index{Push@{Push}!Smart\+Dynamic\+Array@{Smart\+Dynamic\+Array}}
+\subsubsection[{\texorpdfstring{Push(const string \&new\+Item)}{Push(const string &newItem)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void {\bf Smart\+Dynamic\+Array}$<$ T $>$\+::Push (
+\begin{DoxyParamCaption}
+\item[{const string \&}]{new\+Item}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classSmartDynamicArray_a9d69a8736ff3b35dde79883cde0a1ac7}{}\label{classSmartDynamicArray_a9d69a8736ff3b35dde79883cde0a1ac7}
+
+
+Definition at line 25 of file Smart\+Dynamic\+Array.\+hpp.
+
+
+\begin{DoxyCode}
+26     \{
+27         \textcolor{keywordflow}{if} ( \hyperlink{classSmartDynamicArray_a5c85d1791982c4366cd7f01b973aadb4}{m\_data} == \textcolor{keyword}{nullptr} )
+28         \{
+29             \hyperlink{classSmartDynamicArray_ab13fbc825bbeef7f5157ab4daf379a85}{AllocateMemory}();
+30         \}
+31         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} ( \hyperlink{classSmartDynamicArray_a7ba080a321b6b821b6a4fc439f00da79}{IsFull}() )
+32         \{
+33             \hyperlink{classSmartDynamicArray_aacf939cf6279e03a213ed691b8a6aa5d}{Resize}();
+34         \}
+35 
+36         \hyperlink{classSmartDynamicArray_a5c85d1791982c4366cd7f01b973aadb4}{m\_data}[ \hyperlink{classSmartDynamicArray_a132e6ffa1678a3ef2eafad1195df82e4}{m\_itemCount} ] = newItem;
+37         \hyperlink{classSmartDynamicArray_a132e6ffa1678a3ef2eafad1195df82e4}{m\_itemCount}++;
+38     \}
+\end{DoxyCode}
+\index{Smart\+Dynamic\+Array@{Smart\+Dynamic\+Array}!Resize@{Resize}}
+\index{Resize@{Resize}!Smart\+Dynamic\+Array@{Smart\+Dynamic\+Array}}
+\subsubsection[{\texorpdfstring{Resize()}{Resize()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void {\bf Smart\+Dynamic\+Array}$<$ T $>$\+::Resize (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classSmartDynamicArray_aacf939cf6279e03a213ed691b8a6aa5d}{}\label{classSmartDynamicArray_aacf939cf6279e03a213ed691b8a6aa5d}
+
+
+Definition at line 59 of file Smart\+Dynamic\+Array.\+hpp.
+
+
+\begin{DoxyCode}
+60     \{
+61         \hyperlink{classSmartDynamicArray_aacf939cf6279e03a213ed691b8a6aa5d}{Resize}( \hyperlink{classSmartDynamicArray_a57e2d12b656b0aa81f21a8a805f3acf1}{m\_arraySize} + 10 );
+62     \}
+\end{DoxyCode}
+\index{Smart\+Dynamic\+Array@{Smart\+Dynamic\+Array}!Resize@{Resize}}
+\index{Resize@{Resize}!Smart\+Dynamic\+Array@{Smart\+Dynamic\+Array}}
+\subsubsection[{\texorpdfstring{Resize(int new\+Size)}{Resize(int newSize)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void {\bf Smart\+Dynamic\+Array}$<$ T $>$\+::Resize (
+\begin{DoxyParamCaption}
+\item[{int}]{new\+Size}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classSmartDynamicArray_a1bfa64ae55ca6f156e2a5a2263243c0d}{}\label{classSmartDynamicArray_a1bfa64ae55ca6f156e2a5a2263243c0d}
+
+
+Definition at line 64 of file Smart\+Dynamic\+Array.\+hpp.
+
+
+\begin{DoxyCode}
+65     \{
+66         \textcolor{keywordflow}{if} ( \hyperlink{classSmartDynamicArray_a5c85d1791982c4366cd7f01b973aadb4}{m\_data} == \textcolor{keyword}{nullptr} )
+67         \{
+68             \hyperlink{classSmartDynamicArray_ab13fbc825bbeef7f5157ab4daf379a85}{AllocateMemory}( newSize );
+69             \textcolor{keywordflow}{return};
+70         \}
+71 
+72         \textcolor{comment}{// Create bigger array}
+73         \textcolor{keywordtype}{string}* newArray = \textcolor{keyword}{new} \textcolor{keywordtype}{string}[ newSize ];
+74 
+75         \textcolor{comment}{// Copy elements over}
+76         \textcolor{keywordflow}{for} ( \textcolor{keywordtype}{int} i = 0; i < \hyperlink{classSmartDynamicArray_a57e2d12b656b0aa81f21a8a805f3acf1}{m\_arraySize}; i++ )
+77         \{
+78             newArray[i] = \hyperlink{classSmartDynamicArray_a5c85d1791982c4366cd7f01b973aadb4}{m\_data}[i];
+79         \}
+80 
+81         \textcolor{comment}{// Delete old space}
+82         \textcolor{keyword}{delete} [] \hyperlink{classSmartDynamicArray_a5c85d1791982c4366cd7f01b973aadb4}{m\_data};
+83 
+84         \textcolor{comment}{// Update pointer}
+85         \hyperlink{classSmartDynamicArray_a5c85d1791982c4366cd7f01b973aadb4}{m\_data} = newArray;
+86 
+87         \textcolor{comment}{// Update array size}
+88         m\_arraySize = newSize;
+89     \}
+\end{DoxyCode}
+\index{Smart\+Dynamic\+Array@{Smart\+Dynamic\+Array}!Shift\+Left@{Shift\+Left}}
+\index{Shift\+Left@{Shift\+Left}!Smart\+Dynamic\+Array@{Smart\+Dynamic\+Array}}
+\subsubsection[{\texorpdfstring{Shift\+Left(int index)}{ShiftLeft(int index)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void {\bf Smart\+Dynamic\+Array}$<$ T $>$\+::Shift\+Left (
+\begin{DoxyParamCaption}
+\item[{int}]{index}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}\hypertarget{classSmartDynamicArray_a40c441e0e56ed5a738ff78d9f8847e43}{}\label{classSmartDynamicArray_a40c441e0e56ed5a738ff78d9f8847e43}
+
+
+Definition at line 153 of file Smart\+Dynamic\+Array.\+hpp.
+
+
+\begin{DoxyCode}
+154     \{
+155         \textcolor{keywordflow}{for} ( \textcolor{keywordtype}{int} i = index; i < \hyperlink{classSmartDynamicArray_a132e6ffa1678a3ef2eafad1195df82e4}{m\_itemCount} - 1; i++ )
+156         \{
+157             \hyperlink{classSmartDynamicArray_a5c85d1791982c4366cd7f01b973aadb4}{m\_data}[i] = \hyperlink{classSmartDynamicArray_a5c85d1791982c4366cd7f01b973aadb4}{m\_data}[i+1];
+158         \}
+159     \}
+\end{DoxyCode}
+\index{Smart\+Dynamic\+Array@{Smart\+Dynamic\+Array}!Shift\+Right@{Shift\+Right}}
+\index{Shift\+Right@{Shift\+Right}!Smart\+Dynamic\+Array@{Smart\+Dynamic\+Array}}
+\subsubsection[{\texorpdfstring{Shift\+Right(int index)}{ShiftRight(int index)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void {\bf Smart\+Dynamic\+Array}$<$ T $>$\+::Shift\+Right (
+\begin{DoxyParamCaption}
+\item[{int}]{index}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}\hypertarget{classSmartDynamicArray_ac2a448df0eff2b98f92715d8eed2870b}{}\label{classSmartDynamicArray_ac2a448df0eff2b98f92715d8eed2870b}
+
+
+Definition at line 145 of file Smart\+Dynamic\+Array.\+hpp.
+
+
+\begin{DoxyCode}
+146     \{
+147         \textcolor{keywordflow}{for} ( \textcolor{keywordtype}{int} i = \hyperlink{classSmartDynamicArray_a132e6ffa1678a3ef2eafad1195df82e4}{m\_itemCount}; i > index; i-- )
+148         \{
+149             \hyperlink{classSmartDynamicArray_a5c85d1791982c4366cd7f01b973aadb4}{m\_data}[i] = \hyperlink{classSmartDynamicArray_a5c85d1791982c4366cd7f01b973aadb4}{m\_data}[i-1];
+150         \}
+151     \}
+\end{DoxyCode}
+\index{Smart\+Dynamic\+Array@{Smart\+Dynamic\+Array}!Size@{Size}}
+\index{Size@{Size}!Smart\+Dynamic\+Array@{Smart\+Dynamic\+Array}}
+\subsubsection[{\texorpdfstring{Size() const }{Size() const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ int {\bf Smart\+Dynamic\+Array}$<$ T $>$\+::Size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classSmartDynamicArray_a67711ddeea4b0b86bd976359ca323114}{}\label{classSmartDynamicArray_a67711ddeea4b0b86bd976359ca323114}
+
+
+Definition at line 91 of file Smart\+Dynamic\+Array.\+hpp.
+
+
+\begin{DoxyCode}
+92     \{
+93         \textcolor{keywordflow}{return} \hyperlink{classSmartDynamicArray_a132e6ffa1678a3ef2eafad1195df82e4}{m\_itemCount};
+94     \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\index{Smart\+Dynamic\+Array@{Smart\+Dynamic\+Array}!m\+\_\+array\+Size@{m\+\_\+array\+Size}}
+\index{m\+\_\+array\+Size@{m\+\_\+array\+Size}!Smart\+Dynamic\+Array@{Smart\+Dynamic\+Array}}
+\subsubsection[{\texorpdfstring{m\+\_\+array\+Size}{m_arraySize}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ int {\bf Smart\+Dynamic\+Array}$<$ T $>$\+::m\+\_\+array\+Size\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classSmartDynamicArray_a57e2d12b656b0aa81f21a8a805f3acf1}{}\label{classSmartDynamicArray_a57e2d12b656b0aa81f21a8a805f3acf1}
+
+
+Definition at line 201 of file Smart\+Dynamic\+Array.\+hpp.
+
+\index{Smart\+Dynamic\+Array@{Smart\+Dynamic\+Array}!m\+\_\+data@{m\+\_\+data}}
+\index{m\+\_\+data@{m\+\_\+data}!Smart\+Dynamic\+Array@{Smart\+Dynamic\+Array}}
+\subsubsection[{\texorpdfstring{m\+\_\+data}{m_data}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ T$\ast$ {\bf Smart\+Dynamic\+Array}$<$ T $>$\+::m\+\_\+data\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classSmartDynamicArray_a5c85d1791982c4366cd7f01b973aadb4}{}\label{classSmartDynamicArray_a5c85d1791982c4366cd7f01b973aadb4}
+
+
+Definition at line 199 of file Smart\+Dynamic\+Array.\+hpp.
+
+\index{Smart\+Dynamic\+Array@{Smart\+Dynamic\+Array}!m\+\_\+item\+Count@{m\+\_\+item\+Count}}
+\index{m\+\_\+item\+Count@{m\+\_\+item\+Count}!Smart\+Dynamic\+Array@{Smart\+Dynamic\+Array}}
+\subsubsection[{\texorpdfstring{m\+\_\+item\+Count}{m_itemCount}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ int {\bf Smart\+Dynamic\+Array}$<$ T $>$\+::m\+\_\+item\+Count\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classSmartDynamicArray_a132e6ffa1678a3ef2eafad1195df82e4}{}\label{classSmartDynamicArray_a132e6ffa1678a3ef2eafad1195df82e4}
+
+
+Definition at line 200 of file Smart\+Dynamic\+Array.\+hpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Data\+Structures/\hyperlink{SmartDynamicArray_8hpp}{Smart\+Dynamic\+Array.\+hpp}\end{DoxyCompactItemize}

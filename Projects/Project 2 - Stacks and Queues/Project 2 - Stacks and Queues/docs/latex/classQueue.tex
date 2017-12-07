@@ -1,0 +1,152 @@
+\hypertarget{classQueue}{}\section{Queue$<$ T $>$ Class Template Reference}
+\label{classQueue}\index{Queue$<$ T $>$@{Queue$<$ T $>$}}
+
+
+A F\+I\+FO template data structure; inherits from \hyperlink{classLinkedList}{Linked\+List}.  
+
+
+
+
+{\ttfamily \#include $<$Queue.\+hpp$>$}
+
+
+
+Inheritance diagram for Queue$<$ T $>$\+:
+% FIG 0
+
+
+Collaboration diagram for Queue$<$ T $>$\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classQueue_af73bb29c868f7b37f369c668f114bd9f}{Queue} ()
+\begin{DoxyCompactList}\small\item\em Initializes the \hyperlink{classQueue}{Queue}. \end{DoxyCompactList}\item 
+void \hyperlink{classQueue_a2ff135bcbd0fa0b4c4ac8d23f6ac18f1}{Push} (T \&new\+Item)
+\begin{DoxyCompactList}\small\item\em Adds a new item to the back of the \hyperlink{classQueue}{Queue}. \end{DoxyCompactList}\item 
+void \hyperlink{classQueue_a8b6295aa2df009fddade5d0915690e89}{Pop} ()
+\begin{DoxyCompactList}\small\item\em Removes the front-\/most item. \end{DoxyCompactList}\item 
+T \& \hyperlink{classQueue_a16700d9113d5eaef28a25baa0e3329c4}{Front} ()
+\begin{DoxyCompactList}\small\item\em Returns the front-\/most item. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\\*
+class Queue$<$ T $>$}
+
+A F\+I\+FO template data structure; inherits from \hyperlink{classLinkedList}{Linked\+List}. 
+
+Definition at line 8 of file Queue.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Queue@{Queue}!Queue@{Queue}}
+\index{Queue@{Queue}!Queue@{Queue}}
+\subsubsection[{\texorpdfstring{Queue()}{Queue()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf Queue}$<$ T $>$\+::{\bf Queue} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classQueue_af73bb29c868f7b37f369c668f114bd9f}{}\label{classQueue_af73bb29c868f7b37f369c668f114bd9f}
+
+
+Initializes the \hyperlink{classQueue}{Queue}. 
+
+Nothing needs to be added in here; it will already call the \hyperlink{classLinkedList}{Linked\+List}\textquotesingle{}s constructor. 
+
+Definition at line 16 of file Queue.\+hpp.
+
+
+\begin{DoxyCode}
+16             : \hyperlink{classLinkedList}{LinkedList<T>}()
+17     \{
+18     \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{Queue@{Queue}!Front@{Front}}
+\index{Front@{Front}!Queue@{Queue}}
+\subsubsection[{\texorpdfstring{Front()}{Front()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ T\& {\bf Queue}$<$ T $>$\+::Front (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classQueue_a16700d9113d5eaef28a25baa0e3329c4}{}\label{classQueue_a16700d9113d5eaef28a25baa0e3329c4}
+
+
+Returns the front-\/most item. 
+
+Returns the front-\/most item by using Get\+Front from the \hyperlink{classLinkedList}{Linked\+List}.
+
+\begin{DoxyReturn}{Returns}
+$<$T\&$>$ 
+\end{DoxyReturn}
+
+
+Definition at line 47 of file Queue.\+hpp.
+
+
+\begin{DoxyCode}
+48     \{
+49     \}
+\end{DoxyCode}
+\index{Queue@{Queue}!Pop@{Pop}}
+\index{Pop@{Pop}!Queue@{Queue}}
+\subsubsection[{\texorpdfstring{Pop()}{Pop()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void {\bf Queue}$<$ T $>$\+::Pop (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classQueue_a8b6295aa2df009fddade5d0915690e89}{}\label{classQueue_a8b6295aa2df009fddade5d0915690e89}
+
+
+Removes the front-\/most item. 
+
+Calls the Pop\+Front function from \hyperlink{classLinkedList}{Linked\+List}.
+
+\begin{DoxyReturn}{Returns}
+$<$void$>$ 
+\end{DoxyReturn}
+
+
+Definition at line 37 of file Queue.\+hpp.
+
+
+\begin{DoxyCode}
+38     \{
+39     \}
+\end{DoxyCode}
+\index{Queue@{Queue}!Push@{Push}}
+\index{Push@{Push}!Queue@{Queue}}
+\subsubsection[{\texorpdfstring{Push(\+T \&new\+Item)}{Push(T &newItem)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void {\bf Queue}$<$ T $>$\+::Push (
+\begin{DoxyParamCaption}
+\item[{T \&}]{new\+Item}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classQueue_a2ff135bcbd0fa0b4c4ac8d23f6ac18f1}{}\label{classQueue_a2ff135bcbd0fa0b4c4ac8d23f6ac18f1}
+
+
+Adds a new item to the back of the \hyperlink{classQueue}{Queue}. 
+
+New item to add to the \hyperlink{classLinkedList}{Linked\+List} via the Push\+Back function.
+
+
+\begin{DoxyParams}{Parameters}
+{\em $<$\+T\&$>$} & new\+Item \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+$<$void$>$ 
+\end{DoxyReturn}
+
+
+Definition at line 27 of file Queue.\+hpp.
+
+
+\begin{DoxyCode}
+28     \{
+29     \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Data\+Structures/\hyperlink{Queue_8hpp}{Queue.\+hpp}\end{DoxyCompactItemize}

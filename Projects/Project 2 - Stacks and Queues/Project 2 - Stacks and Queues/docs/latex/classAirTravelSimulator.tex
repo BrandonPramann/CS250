@@ -1,0 +1,294 @@
+\hypertarget{classAirTravelSimulator}{}\section{Air\+Travel\+Simulator Class Reference}
+\label{classAirTravelSimulator}\index{Air\+Travel\+Simulator@{Air\+Travel\+Simulator}}
+
+
+Program class with different steps of the air travel experience.  
+
+
+
+
+{\ttfamily \#include $<$Air\+Travel\+Simulator.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classAirTravelSimulator_a2e62e2a182531b5077080af66fc45268}{Air\+Travel\+Simulator} ()
+\begin{DoxyCompactList}\small\item\em Initialize the simulator program. \end{DoxyCompactList}\item 
+void \hyperlink{classAirTravelSimulator_a816bdf99f56fbc05cbffac921e0a6df0}{Run} ()
+\begin{DoxyCompactList}\small\item\em Main program loop. \end{DoxyCompactList}\item 
+bool \hyperlink{classAirTravelSimulator_a1fd8d540a708615996068b91d810fbd2}{Line\+Up} ()
+\begin{DoxyCompactList}\small\item\em Add a new person to the line. \end{DoxyCompactList}\item 
+bool \hyperlink{classAirTravelSimulator_a73c18883082ca7c1f4be8026c4c4c694}{Board} ()
+\begin{DoxyCompactList}\small\item\em Board the next person onto the airplane. \end{DoxyCompactList}\item 
+bool \hyperlink{classAirTravelSimulator_a3714d744cdebd72838e3899f35efd513}{Disembark} ()
+\begin{DoxyCompactList}\small\item\em Pull the next person off the airplane. \end{DoxyCompactList}\item 
+void \hyperlink{classAirTravelSimulator_a9c7d6726a587c06ef85cb174fa1e52b1}{Stats} ()
+\begin{DoxyCompactList}\small\item\em Display the statistics on the travellers. \end{DoxyCompactList}\item 
+void \hyperlink{classAirTravelSimulator_a98236f807be53959dccb65a1bce602d9}{Display\+Message} (\hyperlink{structTraveller}{Traveller} $\ast$ptr\+Person, \hyperlink{States_8hpp_a5d74787dedbc4e11c1ab15bf487e61f8}{State} action)
+\begin{DoxyCompactList}\small\item\em Display updates on each traveller\textquotesingle{}s actions. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Program class with different steps of the air travel experience. 
+
+Definition at line 15 of file Air\+Travel\+Simulator.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Air\+Travel\+Simulator@{Air\+Travel\+Simulator}!Air\+Travel\+Simulator@{Air\+Travel\+Simulator}}
+\index{Air\+Travel\+Simulator@{Air\+Travel\+Simulator}!Air\+Travel\+Simulator@{Air\+Travel\+Simulator}}
+\subsubsection[{\texorpdfstring{Air\+Travel\+Simulator()}{AirTravelSimulator()}}]{\setlength{\rightskip}{0pt plus 5cm}Air\+Travel\+Simulator\+::\+Air\+Travel\+Simulator (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classAirTravelSimulator_a2e62e2a182531b5077080af66fc45268}{}\label{classAirTravelSimulator_a2e62e2a182531b5077080af66fc45268}
+
+
+Initialize the simulator program. 
+
+Set the time stamp to 0, and set the current state to W\+A\+I\+T\+I\+NG. 
+
+Definition at line 8 of file Air\+Travel\+Simulator.\+cpp.
+
+
+\begin{DoxyCode}
+9 \{
+10 \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{Air\+Travel\+Simulator@{Air\+Travel\+Simulator}!Board@{Board}}
+\index{Board@{Board}!Air\+Travel\+Simulator@{Air\+Travel\+Simulator}}
+\subsubsection[{\texorpdfstring{Board()}{Board()}}]{\setlength{\rightskip}{0pt plus 5cm}bool Air\+Travel\+Simulator\+::\+Board (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classAirTravelSimulator_a73c18883082ca7c1f4be8026c4c4c694}{}\label{classAirTravelSimulator_a73c18883082ca7c1f4be8026c4c4c694}
+
+
+Board the next person onto the airplane. 
+
+
+\begin{DoxyEnumerate}
+\item Create a Traveller$\ast$ pointer and get the next item in line from the m\+\_\+airport. Use the Next\+In\+Line() function.
+\item Board the traveller on the m\+\_\+airplane using the Board(...) function.
+\item Change the traveller\textquotesingle{}s state to B\+O\+A\+R\+D\+I\+NG.
+\item Call the Display\+Message(...) function, passing in the traveller and B\+O\+A\+R\+D\+I\+NG.
+\item Return true if the m\+\_\+airport is empty, using Is\+Empty().
+\end{DoxyEnumerate}
+
+\begin{DoxyReturn}{Returns}
+$<$bool$>$ 
+\end{DoxyReturn}
+
+
+Definition at line 83 of file Air\+Travel\+Simulator.\+cpp.
+
+
+\begin{DoxyCode}
+84 \{
+85     \textcolor{keywordflow}{return} \textcolor{keyword}{false}; \textcolor{comment}{// placeholder}
+86 \}
+\end{DoxyCode}
+\index{Air\+Travel\+Simulator@{Air\+Travel\+Simulator}!Disembark@{Disembark}}
+\index{Disembark@{Disembark}!Air\+Travel\+Simulator@{Air\+Travel\+Simulator}}
+\subsubsection[{\texorpdfstring{Disembark()}{Disembark()}}]{\setlength{\rightskip}{0pt plus 5cm}bool Air\+Travel\+Simulator\+::\+Disembark (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classAirTravelSimulator_a3714d744cdebd72838e3899f35efd513}{}\label{classAirTravelSimulator_a3714d744cdebd72838e3899f35efd513}
+
+
+Pull the next person off the airplane. 
+
+
+\begin{DoxyEnumerate}
+\item Create a Traveller$\ast$ pointer and get the next item from the m\+\_\+airplane with the \hyperlink{classAirTravelSimulator_a3714d744cdebd72838e3899f35efd513}{Disembark()} functino.
+\item Set the traveller\textquotesingle{}s state to F\+I\+N\+I\+S\+H\+ED.
+\item Call the Display\+Message(...) function, passing in the traveller and D\+I\+S\+E\+M\+B\+A\+R\+K\+I\+NG.
+\item Return true if m\+\_\+airplane is empty, using Is\+Empty().
+\end{DoxyEnumerate}
+
+\begin{DoxyReturn}{Returns}
+$<$bool$>$ 
+\end{DoxyReturn}
+
+
+Definition at line 97 of file Air\+Travel\+Simulator.\+cpp.
+
+
+\begin{DoxyCode}
+98 \{
+99     \textcolor{keywordflow}{return} \textcolor{keyword}{false}; \textcolor{comment}{// placeholder}
+100 \}
+\end{DoxyCode}
+\index{Air\+Travel\+Simulator@{Air\+Travel\+Simulator}!Display\+Message@{Display\+Message}}
+\index{Display\+Message@{Display\+Message}!Air\+Travel\+Simulator@{Air\+Travel\+Simulator}}
+\subsubsection[{\texorpdfstring{Display\+Message(\+Traveller $\ast$ptr\+Person, State action)}{DisplayMessage(Traveller *ptrPerson, State action)}}]{\setlength{\rightskip}{0pt plus 5cm}void Air\+Travel\+Simulator\+::\+Display\+Message (
+\begin{DoxyParamCaption}
+\item[{{\bf Traveller} $\ast$}]{ptr\+Person, }
+\item[{{\bf State}}]{action}
+\end{DoxyParamCaption}
+)}\hypertarget{classAirTravelSimulator_a98236f807be53959dccb65a1bce602d9}{}\label{classAirTravelSimulator_a98236f807be53959dccb65a1bce602d9}
+
+
+Display updates on each traveller\textquotesingle{}s actions. 
+
+\begin{DoxyReturn}{Returns}
+$<$void$>$ 
+\end{DoxyReturn}
+
+
+Definition at line 128 of file Air\+Travel\+Simulator.\+cpp.
+
+
+\begin{DoxyCode}
+129 \{
+130     cout << std::left << \textcolor{stringliteral}{"("} << m\_timeStamp << \textcolor{stringliteral}{") \(\backslash\)t"}
+131         << setw(4) << \textcolor{stringliteral}{" #"}
+132         << ptrPerson->\hyperlink{structTraveller_a50318826417577279e514222786909a5}{id} << \textcolor{stringliteral}{"\(\backslash\)t"}
+133         << setw(25)
+134         << ptrPerson->\hyperlink{structTraveller_aff70abc8ab515e05dc122cb729af5196}{name} << setw(20);
+135 
+136     \textcolor{keywordflow}{if} (action == \hyperlink{States_8hpp_a5d74787dedbc4e11c1ab15bf487e61f8abaceb8e40ff18fd337f8cb97f7fa170a}{LINEUP})
+137     \{
+138         cout << \textcolor{stringliteral}{"lines up"};
+139     \}
+140     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (action == \hyperlink{States_8hpp_a5d74787dedbc4e11c1ab15bf487e61f8ab569f1a1525c9f31898866d67b17cfd9}{BOARDING})
+141     \{
+142         cout << \textcolor{stringliteral}{"boards"};
+143     \}
+144     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (action == \hyperlink{States_8hpp_a5d74787dedbc4e11c1ab15bf487e61f8a2f1ebb7226431b21aaa18ee1d397abbe}{DISEMBARKING})
+145     \{
+146         cout << \textcolor{stringliteral}{"disembarks"};
+147     \}
+148     cout << setw(10) << \textcolor{stringliteral}{" (Wait time: "} << ptrPerson->\hyperlink{structTraveller_a7b7690d3fc39f3cfda9ede916feb17c6}{waitingTime} << \textcolor{stringliteral}{")"} << endl;
+149 \}
+\end{DoxyCode}
+\index{Air\+Travel\+Simulator@{Air\+Travel\+Simulator}!Line\+Up@{Line\+Up}}
+\index{Line\+Up@{Line\+Up}!Air\+Travel\+Simulator@{Air\+Travel\+Simulator}}
+\subsubsection[{\texorpdfstring{Line\+Up()}{LineUp()}}]{\setlength{\rightskip}{0pt plus 5cm}bool Air\+Travel\+Simulator\+::\+Line\+Up (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classAirTravelSimulator_a1fd8d540a708615996068b91d810fbd2}{}\label{classAirTravelSimulator_a1fd8d540a708615996068b91d810fbd2}
+
+
+Add a new person to the line. 
+
+
+\begin{DoxyEnumerate}
+\item Select a random index between 0 $<$= n $<$ 1000. Store this in an integer.
+\item Create a Traveller$\ast$ pointer, and use the m\+\_\+ppl\+Manager to get the traveller at the random index.
+\item Line up the traveller in the airport waiting room using the Line\+Up(...) function that belongs to the m\+\_\+airport object.
+\item Also add this traveller to the m\+\_\+ptr\+Travellers list that the Air\+Fravel\+Simulator keeps track of.
+\item Set the traveller\textquotesingle{}s state to L\+I\+N\+E\+UP.
+\item Call the Display\+Message(...) function, passing in the traveller and L\+I\+N\+E\+UP.
+\item Finally, return whether we\textquotesingle{}re done lining people up... If the m\+\_\+airport\textquotesingle{}s Waiting\+Count() is equal to the m\+\_\+airport\textquotesingle{}s Get\+Max\+Capacity() then return true.
+\end{DoxyEnumerate}
+
+\begin{DoxyReturn}{Returns}
+$<$bool$>$ 
+\end{DoxyReturn}
+
+
+Definition at line 68 of file Air\+Travel\+Simulator.\+cpp.
+
+
+\begin{DoxyCode}
+69 \{
+70     \textcolor{keywordflow}{return} \textcolor{keyword}{false}; \textcolor{comment}{// placeholder}
+71 \}
+\end{DoxyCode}
+\index{Air\+Travel\+Simulator@{Air\+Travel\+Simulator}!Run@{Run}}
+\index{Run@{Run}!Air\+Travel\+Simulator@{Air\+Travel\+Simulator}}
+\subsubsection[{\texorpdfstring{Run()}{Run()}}]{\setlength{\rightskip}{0pt plus 5cm}void Air\+Travel\+Simulator\+::\+Run (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classAirTravelSimulator_a816bdf99f56fbc05cbffac921e0a6df0}{}\label{classAirTravelSimulator_a816bdf99f56fbc05cbffac921e0a6df0}
+
+
+Main program loop. 
+
+
+\begin{DoxyEnumerate}
+\item Ask the user what the max capacity for the airplane. Get the user\textquotesingle{}s input and set the airport\textquotesingle{}s maximum capacity with the Set\+Max\+Capacity function.
+\item Create a while loop. Continue looping until the m\+\_\+state member variable is N\+OT set to F\+I\+N\+I\+S\+H\+ED. Within the loop...
+\begin{DoxyEnumerate}
+\item Use determine what the current state is.
+\begin{DoxyEnumerate}
+\item If the state is W\+A\+I\+T\+I\+NG, change the state to L\+I\+N\+E\+UP.
+\item If the state is L\+I\+N\+E\+UP, call the \hyperlink{classAirTravelSimulator_a1fd8d540a708615996068b91d810fbd2}{Line\+Up()} function. If the return value of this function is T\+R\+UE, then change the state to B\+O\+A\+R\+D\+I\+NG.
+\item If the statement is B\+O\+A\+R\+D\+I\+NG, call the Boarding() function. If the return value of this function is T\+R\+UE, then change the state to D\+I\+S\+E\+M\+B\+A\+R\+K\+I\+NG.
+\item If the statement D\+I\+S\+E\+M\+B\+A\+R\+K\+I\+NG, call the \hyperlink{classAirTravelSimulator_a3714d744cdebd72838e3899f35efd513}{Disembark()} function. If the return value of this function is T\+R\+UE, then change the state to F\+I\+N\+I\+S\+H\+ED.
+\end{DoxyEnumerate}
+\item At the end of the while loop, incremenet the m\+\_\+time\+Stamp variable, and call the Incrase\+Waiting\+Times() function that belongs to the m\+\_\+ppl\+Manager.
+\end{DoxyEnumerate}
+\item Once the simulation is done running, call the \hyperlink{classAirTravelSimulator_a9c7d6726a587c06ef85cb174fa1e52b1}{Stats()} function.
+\end{DoxyEnumerate}
+
+\begin{DoxyReturn}{Returns}
+$<$void$>$ 
+\end{DoxyReturn}
+
+
+Definition at line 45 of file Air\+Travel\+Simulator.\+cpp.
+
+
+\begin{DoxyCode}
+46 \{
+47     \textcolor{comment}{// Display the header (before the main while loop)}
+48     cout << std::left << \textcolor{stringliteral}{"TIME \(\backslash\)t"} << setw(4)
+49         << \textcolor{stringliteral}{" ID \(\backslash\)t"} << setw(25)
+50         << \textcolor{stringliteral}{"NAME"} << setw(20)
+51         << \textcolor{stringliteral}{"ACTION"} << setw(10)
+52         << \textcolor{stringliteral}{" WAIT TIME"} << endl;
+53 \}
+\end{DoxyCode}
+\index{Air\+Travel\+Simulator@{Air\+Travel\+Simulator}!Stats@{Stats}}
+\index{Stats@{Stats}!Air\+Travel\+Simulator@{Air\+Travel\+Simulator}}
+\subsubsection[{\texorpdfstring{Stats()}{Stats()}}]{\setlength{\rightskip}{0pt plus 5cm}void Air\+Travel\+Simulator\+::\+Stats (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classAirTravelSimulator_a9c7d6726a587c06ef85cb174fa1e52b1}{}\label{classAirTravelSimulator_a9c7d6726a587c06ef85cb174fa1e52b1}
+
+
+Display the statistics on the travellers. 
+
+\begin{DoxyReturn}{Returns}
+$<$void$>$ 
+\end{DoxyReturn}
+
+
+Definition at line 106 of file Air\+Travel\+Simulator.\+cpp.
+
+
+\begin{DoxyCode}
+107 \{
+108     \textcolor{keywordtype}{int} totalWeightTime = 0;
+109 
+110     cout << endl << \textcolor{stringliteral}{"Passengers..."} << endl;
+111     cout << std::left << setw(30) << \textcolor{stringliteral}{"NAME"} << setw(20) << \textcolor{stringliteral}{"WAIT TIME"} << endl;
+112     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < m\_ptrTravellers.\hyperlink{classLinkedList_a056e945c3c66cf37a8f5c843f983098d}{Size}(); i++)
+113     \{
+114         cout << setw(30) << m\_ptrTravellers[i]->name << setw(20) << m\_ptrTravellers[i]->waitingTime << endl
+      ;
+115         totalWeightTime += m\_ptrTravellers[i]->waitingTime;
+116     \}
+117     \textcolor{keywordtype}{float} avgWaitTime = float(totalWeightTime) / float(m\_ptrTravellers.\hyperlink{classLinkedList_a056e945c3c66cf37a8f5c843f983098d}{Size}());
+118 
+119     cout << endl << \textcolor{stringliteral}{"Statistics..."} << endl;
+120     cout << \textcolor{stringliteral}{"* Total passengers: "} << m\_ptrTravellers.\hyperlink{classLinkedList_a056e945c3c66cf37a8f5c843f983098d}{Size}() << endl;
+121     cout << \textcolor{stringliteral}{"* Average wait time: "} << avgWaitTime << endl;
+122 \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{AirTravelSimulator_8hpp}{Air\+Travel\+Simulator.\+hpp}\item 
+\hyperlink{AirTravelSimulator_8cpp}{Air\+Travel\+Simulator.\+cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,206 @@
+\hypertarget{classAirport}{}\section{Airport Class Reference}
+\label{classAirport}\index{Airport@{Airport}}
+
+
+\hyperlink{classAirport}{Airport} structure that has a \char`\"{}waiting room\char`\"{} and a Line to prepare for boarding.  
+
+
+
+
+{\ttfamily \#include $<$Airport.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classAirport_abe869ad0bd58b241cf6e455007fbaca8}{Line\+Up} (\hyperlink{structTraveller}{Traveller} $\ast$traveller)
+\begin{DoxyCompactList}\small\item\em Add an item into the queue to get on the airplane. \end{DoxyCompactList}\item 
+\hyperlink{structTraveller}{Traveller} $\ast$ \hyperlink{classAirport_aa1cd4de531d494c16aef7c864ad16dca}{Next\+In\+Line} ()
+\begin{DoxyCompactList}\small\item\em Get the person at the front of the line. \end{DoxyCompactList}\item 
+bool \hyperlink{classAirport_ae8c1c9ef085f6799e63390cc2d7588a5}{Is\+Empty} ()
+\begin{DoxyCompactList}\small\item\em Returns whether the waiting room is empty. \end{DoxyCompactList}\item 
+int \hyperlink{classAirport_aafde8dfddb8db389d4855ed18db68ac2}{Waiting\+Count} ()
+\begin{DoxyCompactList}\small\item\em Get the amount of people waiting in the queue. \end{DoxyCompactList}\item 
+void \hyperlink{classAirport_a74be9f6b0f8c6988319f55f1b6e13b41}{Set\+Max\+Capacity} (int size)
+\begin{DoxyCompactList}\small\item\em Set the maximum amount of people allowed on an airplane. \end{DoxyCompactList}\item 
+int \hyperlink{classAirport_a56e6af4ae399019ac607f49c592a1afc}{Get\+Max\+Capacity} ()
+\begin{DoxyCompactList}\small\item\em Return the maximum capacity of an airplane. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classAirport}{Airport} structure that has a \char`\"{}waiting room\char`\"{} and a Line to prepare for boarding. 
+
+Definition at line 16 of file Airport.\+hpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{Airport@{Airport}!Get\+Max\+Capacity@{Get\+Max\+Capacity}}
+\index{Get\+Max\+Capacity@{Get\+Max\+Capacity}!Airport@{Airport}}
+\subsubsection[{\texorpdfstring{Get\+Max\+Capacity()}{GetMaxCapacity()}}]{\setlength{\rightskip}{0pt plus 5cm}int Airport\+::\+Get\+Max\+Capacity (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classAirport_a56e6af4ae399019ac607f49c592a1afc}{}\label{classAirport_a56e6af4ae399019ac607f49c592a1afc}
+
+
+Return the maximum capacity of an airplane. 
+
+Return the value of m\+\_\+max\+Capacity
+
+\begin{DoxyReturn}{Returns}
+$<$int$>$ 
+\end{DoxyReturn}
+
+
+Definition at line 67 of file Airport.\+cpp.
+
+
+\begin{DoxyCode}
+68 \{
+69     \textcolor{keywordflow}{return} -1; \textcolor{comment}{// placeholder}
+70 \}
+\end{DoxyCode}
+\index{Airport@{Airport}!Is\+Empty@{Is\+Empty}}
+\index{Is\+Empty@{Is\+Empty}!Airport@{Airport}}
+\subsubsection[{\texorpdfstring{Is\+Empty()}{IsEmpty()}}]{\setlength{\rightskip}{0pt plus 5cm}bool Airport\+::\+Is\+Empty (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classAirport_ae8c1c9ef085f6799e63390cc2d7588a5}{}\label{classAirport_ae8c1c9ef085f6799e63390cc2d7588a5}
+
+
+Returns whether the waiting room is empty. 
+
+Return whether the airport (waiting room) is empty. It is empty if the size of the queue is 0.
+
+\begin{DoxyReturn}{Returns}
+$<$bool$>$ 
+\end{DoxyReturn}
+
+
+Definition at line 33 of file Airport.\+cpp.
+
+
+\begin{DoxyCode}
+34 \{
+35     \textcolor{keywordflow}{return} \textcolor{keyword}{false}; \textcolor{comment}{// placeholder}
+36 \}
+\end{DoxyCode}
+\index{Airport@{Airport}!Line\+Up@{Line\+Up}}
+\index{Line\+Up@{Line\+Up}!Airport@{Airport}}
+\subsubsection[{\texorpdfstring{Line\+Up(\+Traveller $\ast$traveller)}{LineUp(Traveller *traveller)}}]{\setlength{\rightskip}{0pt plus 5cm}void Airport\+::\+Line\+Up (
+\begin{DoxyParamCaption}
+\item[{{\bf Traveller} $\ast$}]{traveller}
+\end{DoxyParamCaption}
+)}\hypertarget{classAirport_abe869ad0bd58b241cf6e455007fbaca8}{}\label{classAirport_abe869ad0bd58b241cf6e455007fbaca8}
+
+
+Add an item into the queue to get on the airplane. 
+
+For the \hyperlink{structTraveller}{Traveller} pointer passed in as the parameter, push them into the line queue.
+
+
+\begin{DoxyParams}{Parameters}
+{\em $<$\+Traveller$\ast$$>$} & traveller \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+$<$void$>$ 
+\end{DoxyReturn}
+
+
+Definition at line 11 of file Airport.\+cpp.
+
+
+\begin{DoxyCode}
+12 \{
+13 \}
+\end{DoxyCode}
+\index{Airport@{Airport}!Next\+In\+Line@{Next\+In\+Line}}
+\index{Next\+In\+Line@{Next\+In\+Line}!Airport@{Airport}}
+\subsubsection[{\texorpdfstring{Next\+In\+Line()}{NextInLine()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Traveller} $\ast$ Airport\+::\+Next\+In\+Line (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classAirport_aa1cd4de531d494c16aef7c864ad16dca}{}\label{classAirport_aa1cd4de531d494c16aef7c864ad16dca}
+
+
+Get the person at the front of the line. 
+
+Get the person at the front of the queue and return them.
+
+\begin{DoxyReturn}{Returns}
+$<$Traveller$\ast$$>$ 
+\end{DoxyReturn}
+
+
+Definition at line 21 of file Airport.\+cpp.
+
+
+\begin{DoxyCode}
+22 \{
+23     \textcolor{keywordflow}{return} \textcolor{keyword}{nullptr}; \textcolor{comment}{// placeholder}
+24 \}
+\end{DoxyCode}
+\index{Airport@{Airport}!Set\+Max\+Capacity@{Set\+Max\+Capacity}}
+\index{Set\+Max\+Capacity@{Set\+Max\+Capacity}!Airport@{Airport}}
+\subsubsection[{\texorpdfstring{Set\+Max\+Capacity(int size)}{SetMaxCapacity(int size)}}]{\setlength{\rightskip}{0pt plus 5cm}void Airport\+::\+Set\+Max\+Capacity (
+\begin{DoxyParamCaption}
+\item[{int}]{size}
+\end{DoxyParamCaption}
+)}\hypertarget{classAirport_a74be9f6b0f8c6988319f55f1b6e13b41}{}\label{classAirport_a74be9f6b0f8c6988319f55f1b6e13b41}
+
+
+Set the maximum amount of people allowed on an airplane. 
+
+Set the value of the m\+\_\+max\+Capacity member variable to the size passed in as a prameter.
+
+
+\begin{DoxyParams}{Parameters}
+{\em $<$int$>$} & size \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+$<$void$>$ 
+\end{DoxyReturn}
+
+
+Definition at line 57 of file Airport.\+cpp.
+
+
+\begin{DoxyCode}
+58 \{
+59 \}
+\end{DoxyCode}
+\index{Airport@{Airport}!Waiting\+Count@{Waiting\+Count}}
+\index{Waiting\+Count@{Waiting\+Count}!Airport@{Airport}}
+\subsubsection[{\texorpdfstring{Waiting\+Count()}{WaitingCount()}}]{\setlength{\rightskip}{0pt plus 5cm}int Airport\+::\+Waiting\+Count (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classAirport_aafde8dfddb8db389d4855ed18db68ac2}{}\label{classAirport_aafde8dfddb8db389d4855ed18db68ac2}
+
+
+Get the amount of people waiting in the queue. 
+
+Return the amount of people in the waiting queue
+
+\begin{DoxyReturn}{Returns}
+$<$int$>$ 
+\end{DoxyReturn}
+
+
+Definition at line 44 of file Airport.\+cpp.
+
+
+\begin{DoxyCode}
+45 \{
+46     \textcolor{keywordflow}{return} -1; \textcolor{comment}{// placeholder}
+47 \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{Airport_8hpp}{Airport.\+hpp}\item 
+\hyperlink{Airport_8cpp}{Airport.\+cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,128 @@
+\hypertarget{classTravellerManager}{}\section{Traveller\+Manager Class Reference}
+\label{classTravellerManager}\index{Traveller\+Manager@{Traveller\+Manager}}
+
+
+A structure that contains the list of all travellers to keep up with (D\+O\+NE)  
+
+
+
+
+{\ttfamily \#include $<$Traveller\+Manager.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classTravellerManager_a0f2f77c2413308f31fbccc6843926081}{Traveller\+Manager} ()
+\item 
+void \hyperlink{classTravellerManager_acb28a17f07f58c9f8218c6bab5b40a22}{Load\+Names} (string filename)
+\item 
+void \hyperlink{classTravellerManager_a4bd97615405bbdf70bf1ebf51d4783d3}{Increase\+Waiting\+Times} ()
+\item 
+\hyperlink{structTraveller}{Traveller} $\ast$ \hyperlink{classTravellerManager_a850cb0dc7cd92d49c1ef7f18b1bc09a1}{Get\+Traveller} (int index)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A structure that contains the list of all travellers to keep up with (D\+O\+NE) 
+
+Definition at line 11 of file Traveller\+Manager.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Traveller\+Manager@{Traveller\+Manager}!Traveller\+Manager@{Traveller\+Manager}}
+\index{Traveller\+Manager@{Traveller\+Manager}!Traveller\+Manager@{Traveller\+Manager}}
+\subsubsection[{\texorpdfstring{Traveller\+Manager()}{TravellerManager()}}]{\setlength{\rightskip}{0pt plus 5cm}Traveller\+Manager\+::\+Traveller\+Manager (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classTravellerManager_a0f2f77c2413308f31fbccc6843926081}{}\label{classTravellerManager_a0f2f77c2413308f31fbccc6843926081}
+
+
+Definition at line 14 of file Traveller\+Manager.\+hpp.
+
+
+\begin{DoxyCode}
+15     \{
+16         \hyperlink{classTravellerManager_acb28a17f07f58c9f8218c6bab5b40a22}{LoadNames}(\textcolor{stringliteral}{"names.txt"});
+17     \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{Traveller\+Manager@{Traveller\+Manager}!Get\+Traveller@{Get\+Traveller}}
+\index{Get\+Traveller@{Get\+Traveller}!Traveller\+Manager@{Traveller\+Manager}}
+\subsubsection[{\texorpdfstring{Get\+Traveller(int index)}{GetTraveller(int index)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Traveller}$\ast$ Traveller\+Manager\+::\+Get\+Traveller (
+\begin{DoxyParamCaption}
+\item[{int}]{index}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classTravellerManager_a850cb0dc7cd92d49c1ef7f18b1bc09a1}{}\label{classTravellerManager_a850cb0dc7cd92d49c1ef7f18b1bc09a1}
+
+
+Definition at line 48 of file Traveller\+Manager.\+hpp.
+
+
+\begin{DoxyCode}
+49     \{
+50         \textcolor{keywordflow}{return} &m\_passengers[index];
+51     \}
+\end{DoxyCode}
+\index{Traveller\+Manager@{Traveller\+Manager}!Increase\+Waiting\+Times@{Increase\+Waiting\+Times}}
+\index{Increase\+Waiting\+Times@{Increase\+Waiting\+Times}!Traveller\+Manager@{Traveller\+Manager}}
+\subsubsection[{\texorpdfstring{Increase\+Waiting\+Times()}{IncreaseWaitingTimes()}}]{\setlength{\rightskip}{0pt plus 5cm}void Traveller\+Manager\+::\+Increase\+Waiting\+Times (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classTravellerManager_a4bd97615405bbdf70bf1ebf51d4783d3}{}\label{classTravellerManager_a4bd97615405bbdf70bf1ebf51d4783d3}
+
+
+Definition at line 37 of file Traveller\+Manager.\+hpp.
+
+
+\begin{DoxyCode}
+38     \{
+39         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < 1000; i++)
+40         \{
+41             \textcolor{keywordflow}{if} (m\_passengers[i].state != \hyperlink{States_8hpp_a5d74787dedbc4e11c1ab15bf487e61f8adbd1812bee789fbf3548cf79d3f2b400}{FINISHED} && m\_passengers[i].state != 
+      \hyperlink{States_8hpp_a5d74787dedbc4e11c1ab15bf487e61f8a757971c0bc5a1972d5f1b1be2c0e2087}{WAITING} )
+42             \{
+43                 m\_passengers[i].\hyperlink{structTraveller_a7b7690d3fc39f3cfda9ede916feb17c6}{waitingTime}++;
+44             \}
+45         \}
+46     \}
+\end{DoxyCode}
+\index{Traveller\+Manager@{Traveller\+Manager}!Load\+Names@{Load\+Names}}
+\index{Load\+Names@{Load\+Names}!Traveller\+Manager@{Traveller\+Manager}}
+\subsubsection[{\texorpdfstring{Load\+Names(string filename)}{LoadNames(string filename)}}]{\setlength{\rightskip}{0pt plus 5cm}void Traveller\+Manager\+::\+Load\+Names (
+\begin{DoxyParamCaption}
+\item[{string}]{filename}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classTravellerManager_acb28a17f07f58c9f8218c6bab5b40a22}{}\label{classTravellerManager_acb28a17f07f58c9f8218c6bab5b40a22}
+
+
+Definition at line 19 of file Traveller\+Manager.\+hpp.
+
+
+\begin{DoxyCode}
+20     \{
+21         ifstream input(filename);
+22 
+23         \textcolor{keywordtype}{string} name;
+24         \textcolor{keywordtype}{int} p = 0;
+25         \textcolor{keywordflow}{while} (input >> name)
+26         \{
+27             m\_passengers[p].\hyperlink{structTraveller_aff70abc8ab515e05dc122cb729af5196}{name} = name;
+28             m\_passengers[p].\hyperlink{structTraveller_a50318826417577279e514222786909a5}{id} = p;
+29             p++;
+30             \textcolor{keywordflow}{if} (p >= 1000)
+31                 \textcolor{keywordflow}{break};
+32         \}
+33 
+34         input.close();
+35     \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{TravellerManager_8hpp}{Traveller\+Manager.\+hpp}\end{DoxyCompactItemize}

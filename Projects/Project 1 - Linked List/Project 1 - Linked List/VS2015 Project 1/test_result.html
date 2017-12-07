@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> cuTEST Test Results </title>
+        <style type='text/css'>
+            body { font-family: monospace; font-size: 1.5em; }
+            .warning { background: ffed24#; font-size: 20px; text-align: center; }
+            .result-success { background: #24ff24; font-size: 20px; text-align: center; }
+            .result-failure { background: #ff7095; font-size: 20px; text-align: center; }
+            table { width: 100%; border: solid 1px #aaaaaa; }
+            table tr.pass { background: #ccffcc; }
+            table tr.fail { background: #ffcccc; }
+            table tr.summary { background: #000000; color: #ffffff; }
+            table tr.descriptions { font-size: 8pt; text-align: center; }
+            table .col_set      { width: 10%; }
+            table .col_test     { width: 20%; }
+            table .col_prereq   { width: 10%; }
+            table .col_result   { width: 5%; }
+            table .col_expected { width: 10%; }
+            table .col_actual   { width: 10%; }
+            table .col_comments { width: 35%; }
+            table .spacer { height: 100px; }
+        </style>
+    </head>
+    <body>
+    <div class='warning'>Warning: Make sure to check if all tests finish (there will be a message at the end of the file) - <br>
+    It is possible for your program to crash early, but still show that tests have passed because it hasn't gone through everything.</div>
+    <table>
+        <tr>
+            <th class='col_set'> Test set </th>
+            <th class='col_test'> Test </th>
+            <th class='col_prereq'> Prerequisite functions </th>
+            <th class='col_result'> Pass/fail </th>
+            <th class='col_expected'> Expected output </th>
+            <th class='col_actual'> Actual output </th>
+            <th class='col_comments'> Comments </th>
+        </tr>
+        <tr class='descriptions'>
+            <td>  </td>
+            <td>  </td>
+            <td> Functions that need to be implemented for these tests to work right </td>
+            <td>  </td>
+            <td> The output expected from the function's return </td>
+            <td> What was actually returned from the function </td>
+            <td> Additional notes from the test </td>
+        </tr>
+<tr class='pass'>
+<td class='test-set'> Test_NodeConstructor </td>
+<td class='test'> When a new node is created, m_ptrPrev should be nullptr. </td>
+<td class='prereq'>  </td>
+<td class='result'> passed </td>
+<td class='expected'> Node's m_ptrPrev is nullptr<br> </td>
+<td class='actual'> Node's m_ptrPrev is nullptr<br> </td>
+<td class='comments'>  </td>
+</tr>
+<tr class='pass'>
+<td class='test-set'> Test_NodeConstructor </td>
+<td class='test'> When a new node is created, m_ptrNext should be nullptr. </td>
+<td class='prereq'>  </td>
+<td class='result'> passed </td>
+<td class='expected'> Node's m_ptrNext is nullptr<br> </td>
+<td class='actual'> Node's m_ptrNext is nullptr<br> </td>
+<td class='comments'>  </td>
+</tr>
+<tr class='summary'>
+<td colspan='7' class='summary'>
+<strong>SUMMARY FOR Test_NodeConstructor:</strong>
+2 out of 2 tests passed
+</td>
+</tr>
+<tr class='spacer'></tr>
+<tr class='pass'>
+<td class='test-set'> Test_Constructor </td>
+<td class='test'> When a LinkedList is created, m_ptrFirst should be nullptr </td>
+<td class='prereq'>  </td>
+<td class='result'> passed </td>
+<td class='expected'> m_ptrFirst is nullptr<br> </td>
+<td class='actual'> m_ptrFirst is nullptr<br> </td>
+<td class='comments'>  </td>
+</tr>
+<tr class='pass'>
+<td class='test-set'> Test_Constructor </td>
+<td class='test'> When a LinkedList is created, m_ptrLast should be nullptr </td>
+<td class='prereq'>  </td>
+<td class='result'> passed </td>
+<td class='expected'> m_ptrLast is nullptr<br> </td>
+<td class='actual'> m_ptrLast is nullptr<br> </td>
+<td class='comments'>  </td>
+</tr>
+<tr class='pass'>
+<td class='test-set'> Test_Constructor </td>
+<td class='test'> When a LinkedList is created, m_itemCount should be 0 </td>
+<td class='prereq'>  </td>
+<td class='result'> passed </td>
+<td class='expected'> m_itemCount = 0<br> </td>
+<td class='actual'> m_itemCount = 0<br> </td>
+<td class='comments'>  </td>
+</tr>
+<tr class='summary'>
+<td colspan='7' class='summary'>
+<strong>SUMMARY FOR Test_Constructor:</strong>
+3 out of 3 tests passed
+</td>
+</tr>
+<tr class='spacer'></tr>
+<tr class='pass'>
+<td class='test-set'> Test_Clear </td>
+<td class='test'> Does Size return 0 after Clear? </td>
+<td class='prereq'> PopFront, PushBack </td>
+<td class='result'> passed </td>
+<td class='expected'> Size() = 0<br> </td>
+<td class='actual'> Size() = 0<br> </td>
+<td class='comments'>  </td>
+</tr>
+<tr class='pass'>
+<td class='test-set'> Test_Clear </td>
+<td class='test'> is first and last pointer pointing to nullptr after Clear? </td>
+<td class='prereq'> PopFront, PushBack </td>
+<td class='result'> passed </td>
+<td class='expected'> List's m_ptrFirst = 00000000<br>List's m_ptrLast = 000000000000000000000000<br> </td>
+<td class='actual'> List's m_ptrFirst = 0000000000000000<br>List's m_ptrLast = 00000000000000000000000000000000<br> </td>
+<td class='comments'>  </td>
+</tr>
+<tr class='summary'>
+<td colspan='7' class='summary'>
+<strong>SUMMARY FOR Test_Clear:</strong>
+2 out of 2 tests passed
+</td>
+</tr>
+<tr class='spacer'></tr>
+<tr class='pass'>
+<td class='test-set'> Test_PushFront </td>
+<td class='test'> When item is added to empty list, m_ptrFirst and m_ptrLast should point at it. </td>
+<td class='prereq'>  </td>
+<td class='result'> passed </td>
+<td class='expected'> customer data = username	ssn	cardtype	cardnum<br> </td>
+<td class='actual'> customer data = username	ssn	cardtype	cardnum<br> </td>
+<td class='comments'> Can't directly verify addresses; verifying by data in the CustomerData. </td>
+</tr>
+<tr class='pass'>
+<td class='test-set'> Test_PushFront </td>
+<td class='test'> When two items are added to an empty list, one should be pointed to by m_ptrFirst, and the other should be pointed to by m_ptrLast </td>
+<td class='prereq'>  </td>
+<td class='result'> passed </td>
+<td class='expected'> FIRST customer data = username1	ssn1	cardtype1	cardnum1<br>LAST customer data = username0	ssn0	cardtype0	cardnum0<br> </td>
+<td class='actual'> FIRST customer data = username1	ssn1	cardtype1	cardnum1<br>LAST customer data = username0	ssn0	cardtype0	cardnum0<br> </td>
+<td class='comments'>  </td>
+</tr>
+<tr class='pass'>
+<td class='test-set'> Test_PushFront </td>
+<td class='test'> When two items are added to an empty list, the two items should point at each other. </td>
+<td class='prereq'>  </td>
+<td class='result'> passed </td>
+<td class='expected'> FIRST Node's ptrNext = 004218A8<br>LAST Node's ptrPrev = 004218A8004218A800421950<br> </td>
+<td class='actual'> FIRST Node's ptrNext = 004218A8004218A8<br>LAST Node's ptrPrev = 004218A8004218A80042195000421950<br> </td>
+<td class='comments'>  </td>
+</tr>
+<tr class='summary'>
+<td colspan='7' class='summary'>
+<strong>SUMMARY FOR Test_PushFront:</strong>
+3 out of 3 tests passed
+</td>
+</tr>
+<tr class='spacer'></tr>
+<tr class='pass'>
+<td class='test-set'> Test_PushBack </td>
+<td class='test'> When item is added to empty list, m_ptrFirst and m_ptrLast should point at it. </td>
+<td class='prereq'>  </td>
+<td class='result'> passed </td>
+<td class='expected'> customer data = username	ssn	cardtype	cardnum<br> </td>
+<td class='actual'> customer data = username	ssn	cardtype	cardnum<br> </td>
+<td class='comments'> Can't directly verify addresses; verifying by data in the CustomerData. </td>
+</tr>
+<tr class='pass'>
+<td class='test-set'> Test_PushBack </td>
+<td class='test'> When two items are added to an empty list, one should be pointed to by m_ptrFirst, and the other should be pointed to by m_ptrLast </td>
+<td class='prereq'>  </td>
+<td class='result'> passed </td>
+<td class='expected'> FIRST customer data = username0	ssn0	cardtype0	cardnum0<br>LAST customer data = username1	ssn1	cardtype1	cardnum1<br> </td>
+<td class='actual'> FIRST customer data = username0	ssn0	cardtype0	cardnum0<br>LAST customer data = username1	ssn1	cardtype1	cardnum1<br> </td>
+<td class='comments'>  </td>
+</tr>
+<tr class='pass'>
+<td class='test-set'> Test_PushBack </td>
+<td class='test'> When two items are added to an empty list, the two items should point at each other. </td>
+<td class='prereq'>  </td>
+<td class='result'> passed </td>
+<td class='expected'> FIRST Node's ptrNext = 00421950<br>LAST Node's ptrPrev = 0042195000421950004218A8<br> </td>
+<td class='actual'> FIRST Node's ptrNext = 0042195000421950<br>LAST Node's ptrPrev = 0042195000421950004218A8004218A8<br> </td>
+<td class='comments'>  </td>
+</tr>
+<tr class='summary'>
+<td colspan='7' class='summary'>
+<strong>SUMMARY FOR Test_PushBack:</strong>
+3 out of 3 tests passed
+</td>
+</tr>
+<tr class='spacer'></tr>
+<tr class='pass'>
+<td class='test-set'> Test_PopFront </td>
+<td class='test'> Popping an item should decrease the item count </td>
+<td class='prereq'> PushBack, GetFront, GetBack </td>
+<td class='result'> passed </td>
+<td class='expected'> m_itemCount, before pop = 1<br>m_itemCount, after pop = 0<br> </td>
+<td class='actual'> m_itemCount, before pop = 1<br>m_itemCount, after pop = 0<br> </td>
+<td class='comments'> Popping the last item </td>
+</tr>
+<tr class='pass'>
+<td class='test-set'> Test_PopFront </td>
+<td class='test'> Popping an item should decrease the item count </td>
+<td class='prereq'> PushBack, GetFront, GetBack </td>
+<td class='result'> passed </td>
+<td class='expected'> m_itemCount, before pop = 2<br>m_itemCount, after pop = 1<br> </td>
+<td class='actual'> m_itemCount, before pop = 2<br>m_itemCount, after pop = 1<br> </td>
+<td class='comments'> Popping an item and still having an item left over </td>
+</tr>
+<tr class='pass'>
+<td class='test-set'> Test_PopFront </td>
+<td class='test'> Pushing Back cd1 then cd2, a PopFront should leave cd2 and cd3. </td>
+<td class='prereq'> PushBack, GetFront, GetBack </td>
+<td class='result'> passed </td>
+<td class='expected'> Front-most item = A	B	D	C<br>Back-most item = p	q	s	r<br> </td>
+<td class='actual'> Front-most item = A	B	D	C<br>Back-most item = p	q	s	r<br> </td>
+<td class='comments'>  </td>
+</tr>
+<tr class='summary'>
+<td colspan='7' class='summary'>
+<strong>SUMMARY FOR Test_PopFront:</strong>
+3 out of 3 tests passed
+</td>
+</tr>
+<tr class='spacer'></tr>
+<tr class='pass'>
+<td class='test-set'> Test_PopBack </td>
+<td class='test'> Popping an item should decrease the item count </td>
+<td class='prereq'> PushBack, GetFront, GetBack </td>
+<td class='result'> passed </td>
+<td class='expected'> m_itemCount, before pop = 1<br>m_itemCount, after pop = 0<br> </td>
+<td class='actual'> m_itemCount, before pop = 1<br>m_itemCount, after pop = 0<br> </td>
+<td class='comments'> Popping the last item </td>
+</tr>
+<tr class='pass'>
+<td class='test-set'> Test_PopBack </td>
+<td class='test'> Popping an item should decrease the item count </td>
+<td class='prereq'> PushBack, GetFront, GetBack </td>
+<td class='result'> passed </td>
+<td class='expected'> m_itemCount, before pop = 2<br>m_itemCount, after pop = 1<br> </td>
+<td class='actual'> m_itemCount, before pop = 2<br>m_itemCount, after pop = 1<br> </td>
+<td class='comments'> Popping an item and still having an item left over </td>
+</tr>
+<tr class='pass'>
+<td class='test-set'> Test_PopBack </td>
+<td class='test'> Pushing Back cd1 then cd2, a PopFront should leave cd2 and cd3. </td>
+<td class='prereq'> PushBack, GetFront, GetBack </td>
+<td class='result'> passed </td>
+<td class='expected'> Front-most item = 1	2	4	3<br>Back-most item = A	B	D	C<br> </td>
+<td class='actual'> Front-most item = 1	2	4	3<br>Back-most item = A	B	D	C<br> </td>
+<td class='comments'>  </td>
+</tr>
+<tr class='summary'>
+<td colspan='7' class='summary'>
+<strong>SUMMARY FOR Test_PopBack:</strong>
+3 out of 3 tests passed
+</td>
+</tr>
+<tr class='spacer'></tr>
+<tr class='pass'>
+<td class='test-set'> Test_GetFront </td>
+<td class='test'> GetFront should throw exception if list is empty </td>
+<td class='prereq'> PushBack </td>
+<td class='result'> passed </td>
+<td class='expected'> Exception thrown<br> </td>
+<td class='actual'> Exception thrown<br> </td>
+<td class='comments'>  </td>
+</tr>
+<tr class='pass'>
+<td class='test-set'> Test_GetFront </td>
+<td class='test'> After inserting several items, GetFront should get the front. </td>
+<td class='prereq'> PushBack </td>
+<td class='result'> passed </td>
+<td class='expected'> customer data = a	b	d	c<br> </td>
+<td class='actual'> customer data = a	b	d	c<br> </td>
+<td class='comments'>  </td>
+</tr>
+<tr class='summary'>
+<td colspan='7' class='summary'>
+<strong>SUMMARY FOR Test_GetFront:</strong>
+2 out of 2 tests passed
+</td>
+</tr>
+<tr class='spacer'></tr>
+<tr class='pass'>
+<td class='test-set'> Test_GetBack </td>
+<td class='test'> GetBack should throw exception if list is empty </td>
+<td class='prereq'>  </td>
+<td class='result'> passed </td>
+<td class='expected'> Exception thrown<br> </td>
+<td class='actual'> Exception thrown<br> </td>
+<td class='comments'>  </td>
+</tr>
+<tr class='pass'>
+<td class='test-set'> Test_GetBack </td>
+<td class='test'> After inserting several items, GetBack should get the back. </td>
+<td class='prereq'>  </td>
+<td class='result'> passed </td>
+<td class='expected'> customer data = 1	2	4	3<br> </td>
+<td class='actual'> customer data = 1	2	4	3<br> </td>
+<td class='comments'>  </td>
+</tr>
+<tr class='summary'>
+<td colspan='7' class='summary'>
+<strong>SUMMARY FOR Test_GetBack:</strong>
+2 out of 2 tests passed
+</td>
+</tr>
+<tr class='spacer'></tr>
+<tr class='pass'>
+<td class='test-set'> Test_SubscriptOperator </td>
+<td class='test'> operator[] should throw exception if list is empty </td>
+<td class='prereq'>  </td>
+<td class='result'> passed </td>
+<td class='expected'> Exception thrown<br> </td>
+<td class='actual'> Exception thrown<br> </td>
+<td class='comments'>  </td>
+</tr>
+<tr class='pass'>
+<td class='test-set'> Test_SubscriptOperator </td>
+<td class='test'> After inserting several items, operator[] get the correct item. </td>
+<td class='prereq'>  </td>
+<td class='result'> passed </td>
+<td class='expected'> customer data = w	x	z	y<br> </td>
+<td class='actual'> customer data = w	x	z	y<br> </td>
+<td class='comments'>  </td>
+</tr>
+<tr class='summary'>
+<td colspan='7' class='summary'>
+<strong>SUMMARY FOR Test_SubscriptOperator:</strong>
+2 out of 2 tests passed
+</td>
+</tr>
+<tr class='spacer'></tr>
+<tr class='pass'>
+<td class='test-set'> Test_IsEmpty </td>
+<td class='test'> An empty list should return true </td>
+<td class='prereq'>  </td>
+<td class='result'> passed </td>
+<td class='expected'> IsEmpty() = 1<br> </td>
+<td class='actual'> IsEmpty() = 1<br> </td>
+<td class='comments'>  </td>
+</tr>
+<tr class='pass'>
+<td class='test-set'> Test_IsEmpty </td>
+<td class='test'> A non-empty list should return true </td>
+<td class='prereq'>  </td>
+<td class='result'> passed </td>
+<td class='expected'> IsEmpty() = 0<br> </td>
+<td class='actual'> IsEmpty() = 0<br> </td>
+<td class='comments'>  </td>
+</tr>
+<tr class='summary'>
+<td colspan='7' class='summary'>
+<strong>SUMMARY FOR Test_IsEmpty:</strong>
+2 out of 2 tests passed
+</td>
+</tr>
+<tr class='spacer'></tr>
+<tr class='pass'>
+<td class='test-set'> Test_Size </td>
+<td class='test'> The size of an empty list should be 0 </td>
+<td class='prereq'> PushBack </td>
+<td class='result'> passed </td>
+<td class='expected'> Size() = 0<br> </td>
+<td class='actual'> Size() = 0<br> </td>
+<td class='comments'>  </td>
+</tr>
+<tr class='pass'>
+<td class='test-set'> Test_Size </td>
+<td class='test'> The size of a list with 3 items should be 3 </td>
+<td class='prereq'> PushBack </td>
+<td class='result'> passed </td>
+<td class='expected'> Size() = 3<br> </td>
+<td class='actual'> Size() = 3<br> </td>
+<td class='comments'>  </td>
+</tr>
+<tr class='summary'>
+<td colspan='7' class='summary'>
+<strong>SUMMARY FOR Test_Size:</strong>
+2 out of 2 tests passed
+</td>
+</tr>
+<tr class='spacer'></tr>
+    </table>
+    <div class='result-success'>12 testsets ran; 12 testsets passed</div>
+    </body>
+</html>

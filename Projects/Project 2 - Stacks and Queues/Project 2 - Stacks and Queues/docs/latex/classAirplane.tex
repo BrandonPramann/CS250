@@ -1,0 +1,116 @@
+\hypertarget{classAirplane}{}\section{Airplane Class Reference}
+\label{classAirplane}\index{Airplane@{Airplane}}
+
+
+\hyperlink{classAirplane}{Airplane} structure that has Board and Disembark functionality.  
+
+
+
+
+{\ttfamily \#include $<$Airplane.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classAirplane_af6f7e57abec0bf44446678b205b4b95e}{Board} (\hyperlink{structTraveller}{Traveller} $\ast$traveller)
+\begin{DoxyCompactList}\small\item\em Move traveller onto airplane. \end{DoxyCompactList}\item 
+\hyperlink{structTraveller}{Traveller} $\ast$ \hyperlink{classAirplane_a2639398261ef756a620a7c6e5136ec99}{Disembark} ()
+\begin{DoxyCompactList}\small\item\em Pull traveller off airplane. \end{DoxyCompactList}\item 
+bool \hyperlink{classAirplane_a709f58346c490b7895c32f7103912237}{Is\+Empty} ()
+\begin{DoxyCompactList}\small\item\em Return whether the airplane is empty (no passengers) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classAirplane}{Airplane} structure that has Board and Disembark functionality. 
+
+Definition at line 18 of file Airplane.\+hpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{Airplane@{Airplane}!Board@{Board}}
+\index{Board@{Board}!Airplane@{Airplane}}
+\subsubsection[{\texorpdfstring{Board(\+Traveller $\ast$traveller)}{Board(Traveller *traveller)}}]{\setlength{\rightskip}{0pt plus 5cm}void Airplane\+::\+Board (
+\begin{DoxyParamCaption}
+\item[{{\bf Traveller} $\ast$}]{traveller}
+\end{DoxyParamCaption}
+)}\hypertarget{classAirplane_af6f7e57abec0bf44446678b205b4b95e}{}\label{classAirplane_af6f7e57abec0bf44446678b205b4b95e}
+
+
+Move traveller onto airplane. 
+
+For the traveller passed in, push it into the airplane\textquotesingle{}s stack.
+
+
+\begin{DoxyParams}{Parameters}
+{\em $<$\+Traveller$\ast$$>$} & traveller \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+$<$void$>$ 
+\end{DoxyReturn}
+
+
+Definition at line 11 of file Airplane.\+cpp.
+
+
+\begin{DoxyCode}
+12 \{
+13 \}
+\end{DoxyCode}
+\index{Airplane@{Airplane}!Disembark@{Disembark}}
+\index{Disembark@{Disembark}!Airplane@{Airplane}}
+\subsubsection[{\texorpdfstring{Disembark()}{Disembark()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Traveller} $\ast$ Airplane\+::\+Disembark (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classAirplane_a2639398261ef756a620a7c6e5136ec99}{}\label{classAirplane_a2639398261ef756a620a7c6e5136ec99}
+
+
+Pull traveller off airplane. 
+
+Get the next (top-\/most) traveller from the airplane stack, remove them from the stack and return the traveller.
+
+\begin{DoxyReturn}{Returns}
+$<$Traveller$\ast$$>$ 
+\end{DoxyReturn}
+
+
+Definition at line 22 of file Airplane.\+cpp.
+
+
+\begin{DoxyCode}
+23 \{
+24 \}
+\end{DoxyCode}
+\index{Airplane@{Airplane}!Is\+Empty@{Is\+Empty}}
+\index{Is\+Empty@{Is\+Empty}!Airplane@{Airplane}}
+\subsubsection[{\texorpdfstring{Is\+Empty()}{IsEmpty()}}]{\setlength{\rightskip}{0pt plus 5cm}bool Airplane\+::\+Is\+Empty (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classAirplane_a709f58346c490b7895c32f7103912237}{}\label{classAirplane_a709f58346c490b7895c32f7103912237}
+
+
+Return whether the airplane is empty (no passengers) 
+
+If the size of the stack is 0, then the airplane is empty.
+
+\begin{DoxyReturn}{Returns}
+$<$bool$>$ 
+\end{DoxyReturn}
+
+
+Definition at line 32 of file Airplane.\+cpp.
+
+
+\begin{DoxyCode}
+33 \{
+34 \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{Airplane_8hpp}{Airplane.\+hpp}\item 
+\hyperlink{Airplane_8cpp}{Airplane.\+cpp}\end{DoxyCompactItemize}

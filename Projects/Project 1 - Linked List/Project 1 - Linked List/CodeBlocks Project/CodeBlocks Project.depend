@@ -1,0 +1,129 @@
+# depslib dependency file v1.0
+1505241101 source:/home/rayechell/TEACHING/cs250/cs-250-private-files/Projects 2017-08/Project 1 Linked List/Project files/cuTEST/TesterBase.cpp
+	"TesterBase.hpp"
+	"Menu.hpp"
+	"StringUtil.hpp"
+
+1505176843 /home/rayechell/TEACHING/cs250/cs-250-private-files/Projects 2017-08/Project 1 Linked List/Project files/cuTEST/TesterBase.hpp
+	<string>
+	<list>
+	<vector>
+	<functional>
+	<fstream>
+
+1505003000 /home/rayechell/TEACHING/cs250/cs-250-private-files/Projects 2017-08/Project 1 Linked List/Project files/cuTEST/Menu.hpp
+	<iostream>
+	<vector>
+	<string>
+	<limits>
+	<cstdlib>
+	<fstream>
+
+1505003000 /home/rayechell/TEACHING/cs250/cs-250-private-files/Projects 2017-08/Project 1 Linked List/Project files/cuTEST/StringUtil.hpp
+	<string>
+	<sstream>
+
+1505007704 source:/home/rayechell/TEACHING/cs250/cs-250-private-files/Projects 2017-08/Project 1 Linked List/Project files/project1_main.cpp
+	<iostream>
+	"project1_Tester.hpp"
+	"project1_program.hpp"
+
+1505249665 /home/rayechell/TEACHING/cs250/cs-250-private-files/Projects 2017-08/Project 1 Linked List/Project files/project1_Tester.hpp
+	<iostream>
+	<string>
+	<ostream>
+	"cuTEST/TesterBase.hpp"
+	"cuTEST/Menu.hpp"
+	"cuTEST/StringUtil.hpp"
+	"project1_LinkedList.hpp"
+
+1505174431 /home/rayechell/TEACHING/cs250/cs-250-private-files/Projects 2017-08/Project 1 Linked List/Project files/project1_LinkedList.hpp
+	<iostream>
+	<string>
+	<stdexcept>
+	"project1_CustomerData.hpp"
+
+1505007312 /home/rayechell/TEACHING/cs250/cs-250-private-files/Projects 2017-08/Project 1 Linked List/Project files/project1_program.hpp
+	<list>
+	<string>
+	<iostream>
+	"project1_LinkedList.hpp"
+
+1505005853 source:/home/rayechell/TEACHING/cs250/cs-250-private-files/Projects 2017-08/Project 1 Linked List/Project files/project1_program.cpp
+	"project1_program.hpp"
+	<fstream>
+
+1505174899 /home/rayechell/TEACHING/cs250/cs-250-private-files/Projects 2017-08/Project 1 Linked List/Project files/project1_CustomerData.hpp
+	<string>
+	<iostream>
+
+1505240636 source:/home/rayechell/TEACHING/cs250/cs-250-private-files/Projects 2017-08/Project 1 Linked List/Project files/project1_LinkedList.cpp
+	"project1_LinkedList.hpp"
+
+1505174950 source:/home/rayechell/TEACHING/cs250/cs-250-private-files/Projects 2017-08/Project 1 Linked List/Project files/project1_CustomerData.cpp
+	"project1_CustomerData.hpp"
+
+1505241101 source:/home/rayechell/TEACHING/cs250/cs-250-private-files/Projects 2017-08/Project 1 Linked List/Project 1 - Linked List/cuTEST/TesterBase.cpp
+	"TesterBase.hpp"
+	"Menu.hpp"
+	"StringUtil.hpp"
+
+1505176843 /home/rayechell/TEACHING/cs250/cs-250-private-files/Projects 2017-08/Project 1 Linked List/Project 1 - Linked List/cuTEST/TesterBase.hpp
+	<string>
+	<list>
+	<vector>
+	<functional>
+	<fstream>
+
+1505003000 /home/rayechell/TEACHING/cs250/cs-250-private-files/Projects 2017-08/Project 1 Linked List/Project 1 - Linked List/cuTEST/Menu.hpp
+	<iostream>
+	<vector>
+	<string>
+	<limits>
+	<cstdlib>
+	<fstream>
+
+1505003000 /home/rayechell/TEACHING/cs250/cs-250-private-files/Projects 2017-08/Project 1 Linked List/Project 1 - Linked List/cuTEST/StringUtil.hpp
+	<string>
+	<sstream>
+
+1505174950 source:/home/rayechell/TEACHING/cs250/cs-250-private-files/Projects 2017-08/Project 1 Linked List/Project 1 - Linked List/project1_CustomerData.cpp
+	"project1_CustomerData.hpp"
+
+1505174899 /home/rayechell/TEACHING/cs250/cs-250-private-files/Projects 2017-08/Project 1 Linked List/Project 1 - Linked List/project1_CustomerData.hpp
+	<string>
+	<iostream>
+
+1505007704 source:/home/rayechell/TEACHING/cs250/cs-250-private-files/Projects 2017-08/Project 1 Linked List/Project 1 - Linked List/project1_main.cpp
+	<iostream>
+	"project1_Tester.hpp"
+	"project1_program.hpp"
+
+1505249665 /home/rayechell/TEACHING/cs250/cs-250-private-files/Projects 2017-08/Project 1 Linked List/Project 1 - Linked List/project1_Tester.hpp
+	<iostream>
+	<string>
+	<ostream>
+	"cuTEST/TesterBase.hpp"
+	"cuTEST/Menu.hpp"
+	"cuTEST/StringUtil.hpp"
+	"project1_LinkedList.hpp"
+
+1505174431 /home/rayechell/TEACHING/cs250/cs-250-private-files/Projects 2017-08/Project 1 Linked List/Project 1 - Linked List/project1_LinkedList.hpp
+	<iostream>
+	<string>
+	<stdexcept>
+	"project1_CustomerData.hpp"
+
+1505249810 /home/rayechell/TEACHING/cs250/cs-250-private-files/Projects 2017-08/Project 1 Linked List/Project 1 - Linked List/project1_program.hpp
+	<list>
+	<string>
+	<iostream>
+	"project1_LinkedList.hpp"
+
+1505005853 source:/home/rayechell/TEACHING/cs250/cs-250-private-files/Projects 2017-08/Project 1 Linked List/Project 1 - Linked List/project1_program.cpp
+	"project1_program.hpp"
+	<fstream>
+
+1505249776 source:/home/rayechell/TEACHING/cs250/cs-250-private-files/Projects 2017-08/Project 1 Linked List/Project 1 - Linked List/project1_LinkedList.cpp
+	"project1_LinkedList.hpp"
+

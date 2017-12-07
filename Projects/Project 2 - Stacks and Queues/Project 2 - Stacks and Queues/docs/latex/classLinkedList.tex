@@ -1,0 +1,368 @@
+\hypertarget{classLinkedList}{}\section{Linked\+List$<$ T $>$ Class Template Reference}
+\label{classLinkedList}\index{Linked\+List$<$ T $>$@{Linked\+List$<$ T $>$}}
+
+
+A \hyperlink{classLinkedList}{Linked\+List} template data structure.  
+
+
+
+
+{\ttfamily \#include $<$Linked\+List.\+hpp$>$}
+
+
+
+Inheritance diagram for Linked\+List$<$ T $>$\+:
+% FIG 0
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classLinkedList_a3c20fcfec867e867f541061a09fc640c}{Linked\+List} ()
+\item 
+\hyperlink{classLinkedList_a7c37609df3b83bc4eb0281b852f93fd7}{$\sim$\+Linked\+List} ()
+\item 
+void \hyperlink{classLinkedList_a1361893725badfba127ccd62a8217a68}{Push\+Front} (T \&new\+Data)
+\item 
+void \hyperlink{classLinkedList_a2eaf6d6d9ecefd0136b2072cebfc8332}{Push\+Back} (T \&new\+Data)
+\item 
+void \hyperlink{classLinkedList_a8db7a458f8f6dc099954b8f1f4e4a2b9}{Pop\+Front} () noexcept
+\item 
+void \hyperlink{classLinkedList_a437df91b2ce800d56a7eb0eadd0914b3}{Pop\+Back} () noexcept
+\item 
+T \& \hyperlink{classLinkedList_af3b555a522e02f263eaad90bf1a7283f}{Get\+Front} ()
+\item 
+T \& \hyperlink{classLinkedList_aeacc5cffbfbf49c339102eec26c109fb}{Get\+Back} ()
+\item 
+T \& \hyperlink{classLinkedList_a9529ad2025d2c83195c0528c605f92fc}{operator\mbox{[}$\,$\mbox{]}} (const int index)
+\item 
+void \hyperlink{classLinkedList_ae4a09cb86da66eb74043a5b47b5ac494}{Clear} ()
+\item 
+bool \hyperlink{classLinkedList_ac5a0d903d22d1157e98b6d3c182e1c74}{Is\+Empty} ()
+\item 
+int \hyperlink{classLinkedList_a056e945c3c66cf37a8f5c843f983098d}{Size} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\\*
+class Linked\+List$<$ T $>$}
+
+A \hyperlink{classLinkedList}{Linked\+List} template data structure. 
+
+Definition at line 28 of file Linked\+List.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Linked\+List@{Linked\+List}!Linked\+List@{Linked\+List}}
+\index{Linked\+List@{Linked\+List}!Linked\+List@{Linked\+List}}
+\subsubsection[{\texorpdfstring{Linked\+List()}{LinkedList()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf Linked\+List}$<$ T $>$\+::{\bf Linked\+List} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classLinkedList_a3c20fcfec867e867f541061a09fc640c}{}\label{classLinkedList_a3c20fcfec867e867f541061a09fc640c}
+
+
+Definition at line 31 of file Linked\+List.\+hpp.
+
+
+\begin{DoxyCode}
+32     \{
+33         m\_ptrFirst = \textcolor{keyword}{nullptr};
+34         m\_ptrLast = \textcolor{keyword}{nullptr};
+35         m\_itemCount = 0;
+36     \}
+\end{DoxyCode}
+\index{Linked\+List@{Linked\+List}!````~Linked\+List@{$\sim$\+Linked\+List}}
+\index{````~Linked\+List@{$\sim$\+Linked\+List}!Linked\+List@{Linked\+List}}
+\subsubsection[{\texorpdfstring{$\sim$\+Linked\+List()}{~LinkedList()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf Linked\+List}$<$ T $>$\+::$\sim${\bf Linked\+List} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classLinkedList_a7c37609df3b83bc4eb0281b852f93fd7}{}\label{classLinkedList_a7c37609df3b83bc4eb0281b852f93fd7}
+
+
+Definition at line 38 of file Linked\+List.\+hpp.
+
+
+\begin{DoxyCode}
+39     \{
+40         \hyperlink{classLinkedList_ae4a09cb86da66eb74043a5b47b5ac494}{Clear}();
+41     \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{Linked\+List@{Linked\+List}!Clear@{Clear}}
+\index{Clear@{Clear}!Linked\+List@{Linked\+List}}
+\subsubsection[{\texorpdfstring{Clear()}{Clear()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ void {\bf Linked\+List}$<$ T $>$\+::Clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classLinkedList_ae4a09cb86da66eb74043a5b47b5ac494}{}\label{classLinkedList_ae4a09cb86da66eb74043a5b47b5ac494}
+
+
+Definition at line 174 of file Linked\+List.\+hpp.
+
+
+\begin{DoxyCode}
+175     \{
+176         \textcolor{keywordflow}{while} ( m\_ptrFirst != \textcolor{keyword}{nullptr} )
+177         \{
+178             \hyperlink{classLinkedList_a8db7a458f8f6dc099954b8f1f4e4a2b9}{PopFront}();
+179         \}
+180     \}
+\end{DoxyCode}
+\index{Linked\+List@{Linked\+List}!Get\+Back@{Get\+Back}}
+\index{Get\+Back@{Get\+Back}!Linked\+List@{Linked\+List}}
+\subsubsection[{\texorpdfstring{Get\+Back()}{GetBack()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ T\& {\bf Linked\+List}$<$ T $>$\+::Get\+Back (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classLinkedList_aeacc5cffbfbf49c339102eec26c109fb}{}\label{classLinkedList_aeacc5cffbfbf49c339102eec26c109fb}
+
+
+Definition at line 139 of file Linked\+List.\+hpp.
+
+
+\begin{DoxyCode}
+140     \{
+141         \textcolor{keywordflow}{if} ( m\_ptrLast == \textcolor{keyword}{nullptr} )
+142         \{
+143             \textcolor{keywordflow}{throw} out\_of\_range( \textcolor{stringliteral}{"Cannot GET an item from an empty list!"} );
+144         \}
+145         \textcolor{keywordflow}{else}
+146         \{
+147             \textcolor{keywordflow}{return} m\_ptrLast->m\_data;
+148         \}
+149     \}
+\end{DoxyCode}
+\index{Linked\+List@{Linked\+List}!Get\+Front@{Get\+Front}}
+\index{Get\+Front@{Get\+Front}!Linked\+List@{Linked\+List}}
+\subsubsection[{\texorpdfstring{Get\+Front()}{GetFront()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ T\& {\bf Linked\+List}$<$ T $>$\+::Get\+Front (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classLinkedList_af3b555a522e02f263eaad90bf1a7283f}{}\label{classLinkedList_af3b555a522e02f263eaad90bf1a7283f}
+
+
+Definition at line 127 of file Linked\+List.\+hpp.
+
+
+\begin{DoxyCode}
+128     \{
+129         \textcolor{keywordflow}{if} ( m\_ptrFirst == \textcolor{keyword}{nullptr} )
+130         \{
+131             \textcolor{keywordflow}{throw} out\_of\_range( \textcolor{stringliteral}{"Cannot GET an item from an empty list!"} );
+132         \}
+133         \textcolor{keywordflow}{else}
+134         \{
+135             \textcolor{keywordflow}{return} m\_ptrFirst->m\_data;
+136         \}
+137     \}
+\end{DoxyCode}
+\index{Linked\+List@{Linked\+List}!Is\+Empty@{Is\+Empty}}
+\index{Is\+Empty@{Is\+Empty}!Linked\+List@{Linked\+List}}
+\subsubsection[{\texorpdfstring{Is\+Empty()}{IsEmpty()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ bool {\bf Linked\+List}$<$ T $>$\+::Is\+Empty (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classLinkedList_ac5a0d903d22d1157e98b6d3c182e1c74}{}\label{classLinkedList_ac5a0d903d22d1157e98b6d3c182e1c74}
+
+
+Definition at line 182 of file Linked\+List.\+hpp.
+
+
+\begin{DoxyCode}
+183     \{
+184         \textcolor{keywordflow}{return} ( m\_itemCount == 0 );
+185     \}
+\end{DoxyCode}
+\index{Linked\+List@{Linked\+List}!operator\mbox{[}$\,$\mbox{]}@{operator[]}}
+\index{operator\mbox{[}$\,$\mbox{]}@{operator[]}!Linked\+List@{Linked\+List}}
+\subsubsection[{\texorpdfstring{operator[](const int index)}{operator[](const int index)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ T\& {\bf Linked\+List}$<$ T $>$\+::operator\mbox{[}$\,$\mbox{]} (
+\begin{DoxyParamCaption}
+\item[{const int}]{index}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classLinkedList_a9529ad2025d2c83195c0528c605f92fc}{}\label{classLinkedList_a9529ad2025d2c83195c0528c605f92fc}
+
+
+Definition at line 151 of file Linked\+List.\+hpp.
+
+
+\begin{DoxyCode}
+152     \{
+153         \textcolor{keywordflow}{if} ( m\_ptrFirst == \textcolor{keyword}{nullptr} )
+154         \{
+155             \textcolor{keywordflow}{throw} out\_of\_range( \textcolor{stringliteral}{"Cannot GET an item from an empty list!"} );
+156         \}
+157         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} ( index < 0 || index >= m\_itemCount )
+158         \{
+159             \textcolor{keywordflow}{throw} out\_of\_range( \textcolor{stringliteral}{"Invalid index passed into [ ]"} );
+160         \}
+161 
+162         \textcolor{keywordtype}{int} counter = 0;
+163         \hyperlink{structNode}{Node<T>}* current = m\_ptrFirst;
+164 
+165         \textcolor{keywordflow}{while} ( current != \textcolor{keyword}{nullptr} && counter < index )
+166         \{
+167             current = current->\hyperlink{structNode_a36826cd3138b5c317fb16ccefea0d9e6}{m\_ptrNext};
+168             counter++;
+169         \}
+170 
+171         \textcolor{keywordflow}{return} current->\hyperlink{structNode_a392c71799aaa644ca5c63e5413769730}{m\_data};
+172     \}
+\end{DoxyCode}
+\index{Linked\+List@{Linked\+List}!Pop\+Back@{Pop\+Back}}
+\index{Pop\+Back@{Pop\+Back}!Linked\+List@{Linked\+List}}
+\subsubsection[{\texorpdfstring{Pop\+Back() noexcept}{PopBack() noexcept}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ void {\bf Linked\+List}$<$ T $>$\+::Pop\+Back (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}\hypertarget{classLinkedList_a437df91b2ce800d56a7eb0eadd0914b3}{}\label{classLinkedList_a437df91b2ce800d56a7eb0eadd0914b3}
+
+
+Definition at line 104 of file Linked\+List.\+hpp.
+
+
+\begin{DoxyCode}
+105     \{
+106         \textcolor{keywordflow}{if} ( m\_ptrLast == \textcolor{keyword}{nullptr} )
+107         \{
+108             \textcolor{comment}{// ignore}
+109         \}
+110         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} ( m\_ptrFirst == m\_ptrLast )
+111         \{
+112             \textcolor{keyword}{delete} m\_ptrFirst;
+113             m\_ptrFirst = \textcolor{keyword}{nullptr};
+114             m\_ptrLast = \textcolor{keyword}{nullptr};
+115             m\_itemCount--;
+116         \}
+117         \textcolor{keywordflow}{else}
+118         \{
+119             \hyperlink{structNode}{Node<T>}* ptrSecond = m\_ptrLast->m\_ptrPrev;
+120             ptrSecond->\hyperlink{structNode_a36826cd3138b5c317fb16ccefea0d9e6}{m\_ptrNext} = \textcolor{keyword}{nullptr};
+121             \textcolor{keyword}{delete} m\_ptrLast;
+122             m\_ptrLast = ptrSecond;
+123             m\_itemCount--;
+124         \}
+125     \}
+\end{DoxyCode}
+\index{Linked\+List@{Linked\+List}!Pop\+Front@{Pop\+Front}}
+\index{Pop\+Front@{Pop\+Front}!Linked\+List@{Linked\+List}}
+\subsubsection[{\texorpdfstring{Pop\+Front() noexcept}{PopFront() noexcept}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ void {\bf Linked\+List}$<$ T $>$\+::Pop\+Front (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}\hypertarget{classLinkedList_a8db7a458f8f6dc099954b8f1f4e4a2b9}{}\label{classLinkedList_a8db7a458f8f6dc099954b8f1f4e4a2b9}
+
+
+Definition at line 81 of file Linked\+List.\+hpp.
+
+
+\begin{DoxyCode}
+82     \{
+83         \textcolor{keywordflow}{if} ( m\_ptrFirst == \textcolor{keyword}{nullptr} )
+84         \{
+85             \textcolor{comment}{// ignore}
+86         \}
+87         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} ( m\_ptrFirst == m\_ptrLast )
+88         \{
+89             \textcolor{keyword}{delete} m\_ptrFirst;
+90             m\_ptrFirst = \textcolor{keyword}{nullptr};
+91             m\_ptrLast = \textcolor{keyword}{nullptr};
+92             m\_itemCount--;
+93         \}
+94         \textcolor{keywordflow}{else}
+95         \{
+96             \hyperlink{structNode}{Node<T>}* ptrSecond = m\_ptrFirst->m\_ptrNext;
+97             ptrSecond->\hyperlink{structNode_a4ac5c4812b8d0131789509c89d192ac5}{m\_ptrPrev} = \textcolor{keyword}{nullptr};
+98             \textcolor{keyword}{delete} m\_ptrFirst;
+99             m\_ptrFirst = ptrSecond;
+100             m\_itemCount--;
+101         \}
+102     \}
+\end{DoxyCode}
+\index{Linked\+List@{Linked\+List}!Push\+Back@{Push\+Back}}
+\index{Push\+Back@{Push\+Back}!Linked\+List@{Linked\+List}}
+\subsubsection[{\texorpdfstring{Push\+Back(\+T \&new\+Data)}{PushBack(T &newData)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ void {\bf Linked\+List}$<$ T $>$\+::Push\+Back (
+\begin{DoxyParamCaption}
+\item[{T \&}]{new\+Data}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classLinkedList_a2eaf6d6d9ecefd0136b2072cebfc8332}{}\label{classLinkedList_a2eaf6d6d9ecefd0136b2072cebfc8332}
+
+
+Definition at line 62 of file Linked\+List.\+hpp.
+
+
+\begin{DoxyCode}
+63     \{
+64         \hyperlink{structNode}{Node<T>}* newNode = \textcolor{keyword}{new} \hyperlink{structNode}{Node<T>};
+65         newNode->\hyperlink{structNode_a392c71799aaa644ca5c63e5413769730}{m\_data} = newData;
+66         m\_itemCount++;
+67 
+68         \textcolor{keywordflow}{if} ( m\_ptrLast == \textcolor{keyword}{nullptr} )
+69         \{
+70             m\_ptrFirst = newNode;
+71             m\_ptrLast = newNode;
+72         \}
+73         \textcolor{keywordflow}{else}
+74         \{
+75             m\_ptrLast->m\_ptrNext = newNode;
+76             newNode->\hyperlink{structNode_a4ac5c4812b8d0131789509c89d192ac5}{m\_ptrPrev} = m\_ptrLast;
+77             m\_ptrLast = newNode;
+78         \}
+79     \}
+\end{DoxyCode}
+\index{Linked\+List@{Linked\+List}!Push\+Front@{Push\+Front}}
+\index{Push\+Front@{Push\+Front}!Linked\+List@{Linked\+List}}
+\subsubsection[{\texorpdfstring{Push\+Front(\+T \&new\+Data)}{PushFront(T &newData)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ void {\bf Linked\+List}$<$ T $>$\+::Push\+Front (
+\begin{DoxyParamCaption}
+\item[{T \&}]{new\+Data}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classLinkedList_a1361893725badfba127ccd62a8217a68}{}\label{classLinkedList_a1361893725badfba127ccd62a8217a68}
+
+
+Definition at line 43 of file Linked\+List.\+hpp.
+
+
+\begin{DoxyCode}
+44     \{
+45         \hyperlink{structNode}{Node<T>}* newNode = \textcolor{keyword}{new} \hyperlink{structNode}{Node<T>};
+46         newNode->\hyperlink{structNode_a392c71799aaa644ca5c63e5413769730}{m\_data} = newData;
+47         m\_itemCount++;
+48 
+49         \textcolor{keywordflow}{if} ( m\_ptrFirst == \textcolor{keyword}{nullptr} )
+50         \{
+51             m\_ptrFirst = newNode;
+52             m\_ptrLast = newNode;
+53         \}
+54         \textcolor{keywordflow}{else}
+55         \{
+56             newNode->\hyperlink{structNode_a36826cd3138b5c317fb16ccefea0d9e6}{m\_ptrNext} = m\_ptrFirst;
+57             m\_ptrFirst->m\_ptrPrev = newNode;
+58             m\_ptrFirst = newNode;
+59         \}
+60     \}
+\end{DoxyCode}
+\index{Linked\+List@{Linked\+List}!Size@{Size}}
+\index{Size@{Size}!Linked\+List@{Linked\+List}}
+\subsubsection[{\texorpdfstring{Size()}{Size()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ int {\bf Linked\+List}$<$ T $>$\+::Size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classLinkedList_a056e945c3c66cf37a8f5c843f983098d}{}\label{classLinkedList_a056e945c3c66cf37a8f5c843f983098d}
+
+
+Definition at line 187 of file Linked\+List.\+hpp.
+
+
+\begin{DoxyCode}
+188     \{
+189         \textcolor{keywordflow}{return} m\_itemCount;
+190     \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Data\+Structures/\hyperlink{LinkedList_8hpp}{Linked\+List.\+hpp}\end{DoxyCompactItemize}
