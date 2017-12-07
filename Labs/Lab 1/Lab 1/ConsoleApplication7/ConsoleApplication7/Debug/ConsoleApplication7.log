@@ -1,0 +1,4 @@
+﻿  Source.cpp
+c:\users\charlene\desktop\consoleapplication7\consoleapplication7\source.cpp(13): warning C4018: '<': signed/unsigned mismatch
+  ConsoleApplication7.vcxproj -> C:\Users\Charlene\Desktop\ConsoleApplication7\Debug\ConsoleApplication7.exe
+  ConsoleApplication7.vcxproj -> C:\Users\Charlene\Desktop\ConsoleApplication7\Debug\ConsoleApplication7.pdb (Full PDB)

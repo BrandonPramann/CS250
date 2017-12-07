@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1508298965 source:/home/rayechell/TEACHING/cs250/cs-250-private-files/Labs 2017-08/Lab 11 - Priority Queue/Lab 11 - Priority Queue/main.cpp
+	"PriorityQueue.hpp"
+	<fstream>
+	<string>
+
+1508299835 /home/rayechell/TEACHING/cs250/cs-250-private-files/Labs 2017-08/Lab 11 - Priority Queue/Lab 11 - Priority Queue/PriorityQueue.hpp
+	<stdexcept>
+	<iostream>
+

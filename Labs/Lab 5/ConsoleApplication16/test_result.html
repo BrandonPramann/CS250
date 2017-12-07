@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> cuTEST Test Results </title>
+
+        <style type="text/css">
+            body { font-family: monospace; font-size: 1.5em; }
+
+            table { width: 100%; border: solid 1px #aaaaaa; }
+            table tr.pass { background: #ccffcc; }
+            table tr.fail { background: #ffcccc; }
+
+            table tr.summary { background: #000000; color: #ffffff; }
+
+            table tr.descriptions { font-size: 8pt; text-align: center; }
+
+            table .col_set      { width: 10%; }
+            table .col_test     { width: 20%; }
+            table .col_prereq   { width: 10%; }
+            table .col_result   { width: 5%; }
+            table .col_expected { width: 10%; }
+            table .col_actual   { width: 10%; }
+            table .col_comments { width: 35%; }
+            table .spacer { height: 100px; }
+        </style>
+    </head>
+
+    <body>
+
+    <table>
+        <tr>
+            <th class="col_set"> Test set </th>
+            <th class="col_test"> Test </th>
+            <th class="col_prereq"> Prerequisite functions </th>
+            <th class="col_result"> Pass/fail </th>
+            <th class="col_expected"> Expected output </th>
+            <th class="col_actual"> Actual output </th>
+            <th class="col_comments"> Comments </th>
+        </tr>
+
+        <tr class="descriptions">
+            <td>  </td>
+            <td>  </td>
+            <td> Functions that need to be implemented for these tests to work right </td>
+            <td>  </td>
+            <td> The output expected from the function's return </td>
+            <td> What was actually returned from the function </td>
+            <td> Additional notes from the test </td>
+        </tr>
+<tr class='fail'>
+<td class='test-set'> Test_Initialize </td>
+<td class='test'> Check to make sure new SmartDynamicArrays initialize its m_data pointer to nullptr </td>
+<td class='prereq'> SmartDynamicArray constructor </td>
+<td class='result'> failed </td>
+<td class='expected'> m_data = 0<br> </td>
+<td class='actual'> m_data = 00x1ed0150<br> </td>
+<td class='comments'> Created new empty SmartDynamicArray </td>
+</tr>
+<tr class='fail'>
+<td class='test-set'> Test_Initialize </td>
+<td class='test'> Check to make sure new SmartDynamicArrays initialize its m_itemCount value to 0 </td>
+<td class='prereq'> SmartDynamicArray constructor </td>
+<td class='result'> failed </td>
+<td class='expected'> m_itemCount = 0<br> </td>
+<td class='actual'> m_itemCount = 32309616<br> </td>
+<td class='comments'> Created new empty SmartDynamicArray </td>
+</tr>
+<tr class='pass'>
+<td class='test-set'> Test_Initialize </td>
+<td class='test'> Check to make sure new SmartDynamicArrays initialize its m_arraySize value to 0 </td>
+<td class='prereq'> SmartDynamicArray constructor </td>
+<td class='result'> passed </td>
+<td class='expected'> m_arraySize = 0<br> </td>
+<td class='actual'> m_arraySize = 0<br> </td>
+<td class='comments'> Created new empty SmartDynamicArray </td>
+</tr>
+<tr class='summary'>
+<td colspan='7' class='summary'>
+<strong>SUMMARY FOR Test_Initialize:</strong>
+1 out of 3 tests passed
+</td>
+</tr>
+<tr class='spacer'></tr>
+<tr class='fail'>
+<td class='test-set'> Test_AllocateMemory </td>
+<td class='test'> When m_data is already pointing to an address, make sure an exception is thrown </td>
+<td class='prereq'> AllocateMemory </td>
+<td class='result'> failed </td>
+<td class='expected'> Should throw an exception<br> </td>
+<td class='actual'> Didn't throw exception<br> </td>
+<td class='comments'> Created new SmartDynamicArray, set its m_data to some address, called AllocateMemory. Should throw exception and not change m_data. </td>
+</tr>
+<tr class='pass'>
+<td class='test-set'> Test_AllocateMemory </td>
+<td class='test'> When m_data is already pointing to an address, make the address doesn't change </td>
+<td class='prereq'> AllocateMemory </td>
+<td class='result'> passed </td>
+<td class='expected'> m_data = 0x1ed0938<br> </td>
+<td class='actual'> m_data = 0x1ed09380x1ed0938<br> </td>
+<td class='comments'> Created new SmartDynamicArray, set its m_data to some address, called AllocateMemory. m_data should still point to original address and not a new address. </td>
+</tr>
+<tr class='summary'>
+<td colspan='7' class='summary'>
+<strong>SUMMARY FOR Test_AllocateMemory:</strong>
+1 out of 2 tests passed
+</td>
+</tr>
+<tr class='spacer'></tr>
+<tr class='pass'>
+<td class='test-set'> Test_DeallocateMemory </td>
+<td class='test'> When m_data is not pointing to an address, calling DeallocateMemory shouldn't cause a problem </td>
+<td class='prereq'> DeallocateMemory </td>
+<td class='result'> passed </td>
+<td class='expected'> Shouldn't have an error<br> </td>
+<td class='actual'> Didn't throw exception<br> </td>
+<td class='comments'> Created new SmartDynamicArray, set its m_data to nullptr, called DeallocateMemory. </td>
+</tr>
+<tr class='fail'>
+<td class='test-set'> Test_DeallocateMemory </td>
+<td class='test'> When m_data is already pointing to an address, make the address doesn't change </td>
+<td class='prereq'> DeallocateMemory </td>
+<td class='result'> failed </td>
+<td class='expected'> m_data = 0<br> </td>
+<td class='actual'> m_data = 00x1ed1908<br> </td>
+<td class='comments'> Created new SmartDynamicArray, set its m_data to some address, called DeallocateMemory. Memory should be freed (can't test this) & m_data set to nullptr. </td>
+</tr>
+<tr class='summary'>
+<td colspan='7' class='summary'>
+<strong>SUMMARY FOR Test_DeallocateMemory:</strong>
+1 out of 2 tests passed
+</td>
+</tr>
+<tr class='spacer'></tr>
+<tr class='fail'>
+<td class='test-set'> Test_IsInvalidIndex </td>
+<td class='test'> Make sure negative indexes are marked as invalid </td>
+<td class='prereq'> IsInvalidIndex </td>
+<td class='result'> failed </td>
+<td class='expected'> IsInvalidIndex() = 1<br> </td>
+<td class='actual'> IsInvalidIndex() = 0<br> </td>
+<td class='comments'> Index is -1 </td>
+</tr>
+<tr class='fail'>
+<td class='test-set'> Test_IsInvalidIndex </td>
+<td class='test'> Make sure negative indexes are marked as invalid </td>
+<td class='prereq'> IsInvalidIndex </td>
+<td class='result'> failed </td>
+<td class='expected'> IsInvalidIndex() = 1<br> </td>
+<td class='actual'> IsInvalidIndex() = 0<br> </td>
+<td class='comments'> Index is -10 </td>
+</tr>
+<tr class='pass'>
+<td class='test-set'> Test_IsInvalidIndex </td>
+<td class='test'> Make sure 0 index is marked as valid </td>
+<td class='prereq'> IsInvalidIndex </td>
+<td class='result'> passed </td>
+<td class='expected'> IsInvalidIndex() = 0<br> </td>
+<td class='actual'> IsInvalidIndex() = 0<br> </td>
+<td class='comments'> Index is 0 </td>
+</tr>
+<tr class='pass'>
+<td class='test-set'> Test_IsInvalidIndex </td>
+<td class='test'> Make sure positive index is marked as valid </td>
+<td class='prereq'> IsInvalidIndex </td>
+<td class='result'> passed </td>
+<td class='expected'> IsInvalidIndex() = 0<br> </td>
+<td class='actual'> IsInvalidIndex() = 0<br> </td>
+<td class='comments'> Index is 5 </td>
+</tr>
+<tr class='summary'>
+<td colspan='7' class='summary'>
+<strong>SUMMARY FOR Test_IsInvalidIndex:</strong>
+2 out of 4 tests passed
+</td>
+</tr>
+<tr class='spacer'></tr>
+<tr class='fail'>
+<td class='test-set'> Test_IsNonContiguousIndex </td>
+<td class='test'> When the item count is 0, make sure anything after 1 is non-contiguous </td>
+<td class='prereq'> IsNonContiguousIndex </td>
+<td class='result'> failed </td>
+<td class='expected'> IsNonContiguousIndex() = 1<br> </td>
+<td class='actual'> IsNonContiguousIndex() = 0<br> </td>
+<td class='comments'> Index is 5 </td>
+</tr>
+<tr class='pass'>
+<td class='test-set'> Test_IsNonContiguousIndex </td>
+<td class='test'> When the item count is 0, make sure 0 is contiguous </td>
+<td class='prereq'> IsNonContiguousIndex </td>
+<td class='result'> passed </td>
+<td class='expected'> IsNonContiguousIndex() = 0<br> </td>
+<td class='actual'> IsNonContiguousIndex() = 0<br> </td>
+<td class='comments'> Index is 0 </td>
+</tr>
+<tr class='pass'>
+<td class='test-set'> Test_IsNonContiguousIndex </td>
+<td class='test'> When the item count is 5, make sure 2 is contiguous </td>
+<td class='prereq'> IsNonContiguousIndex </td>
+<td class='result'> passed </td>
+<td class='expected'> IsNonContiguousIndex() = 0<br> </td>
+<td class='actual'> IsNonContiguousIndex() = 0<br> </td>
+<td class='comments'> Index is 2 </td>
+</tr>
+<tr class='pass'>
+<td class='test-set'> Test_IsNonContiguousIndex </td>
+<td class='test'> When the item count is 5, make sure 5 is contiguous </td>
+<td class='prereq'> IsNonContiguousIndex </td>
+<td class='result'> passed </td>
+<td class='expected'> IsNonContiguousIndex() = 0<br> </td>
+<td class='actual'> IsNonContiguousIndex() = 0<br> </td>
+<td class='comments'> Index is 5 </td>
+</tr>
+<tr class='fail'>
+<td class='test-set'> Test_IsNonContiguousIndex </td>
+<td class='test'> When the item count is 5, make sure 6 is non-contiguous </td>
+<td class='prereq'> IsNonContiguousIndex </td>
+<td class='result'> failed </td>
+<td class='expected'> IsNonContiguousIndex() = 1<br> </td>
+<td class='actual'> IsNonContiguousIndex() = 0<br> </td>
+<td class='comments'> Index is 5 </td>
+</tr>
+<tr class='summary'>
+<td colspan='7' class='summary'>
+<strong>SUMMARY FOR Test_IsNonContiguousIndex:</strong>
+3 out of 5 tests passed
+</td>
+</tr>
+<tr class='spacer'></tr>
+<tr class='fail'>
+<td class='test-set'> Test_Push </td>
+<td class='test'> Push an item to empty SmartDynamicArray, make sure memory is allocated. </td>
+<td class='prereq'> Push </td>
+<td class='result'> failed </td>
+<td class='expected'> m_data shouldn't be pointing at nullptr<br> </td>
+<td class='actual'> m_data = 0<br> </td>
+<td class='comments'> Created new empty SmartDynamicArray, pushed one item in </td>
+</tr>
+<tr class='summary'>
+<td colspan='7' class='summary'>
+<strong>SUMMARY FOR Test_Push:</strong>
+0 out of 1 tests passed
+</td>
+</tr>
+<tr class='spacer'></tr>
+<tr class='fail'>
+<td class='test-set'> Test_Pop </td>
+<td class='test'> Size should not become negative if pop is called on an empty SmartDynamicArray </td>
+<td class='prereq'> Pop, Push </td>
+<td class='result'> failed </td>
+<td class='expected'> m_itemCount = 0<br> </td>
+<td class='actual'> m_itemCount = 32311568<br> </td>
+<td class='comments'> Created empty SmartDynamicArray, called Pop </td>
+</tr>
+<tr class='fail'>
+<td class='test-set'> Test_Pop </td>
+<td class='test'> Size should be 0 after calling push then pop </td>
+<td class='prereq'> Pop, Push </td>
+<td class='result'> failed </td>
+<td class='expected'> m_itemCount = 0<br> </td>
+<td class='actual'> m_itemCount = 32311568<br> </td>
+<td class='comments'> Created empty SmartDynamicArray, called Push, then called Pop </td>
+</tr>
+<tr class='fail'>
+<td class='test-set'> Test_Pop </td>
+<td class='test'> Size should be -1 after popping one item </td>
+<td class='prereq'> Pop, Push </td>
+<td class='result'> failed </td>
+<td class='expected'> m_itemCount = 2<br> </td>
+<td class='actual'> m_itemCount = 32311568<br> </td>
+<td class='comments'> Created empty SmartDynamicArray, called Push 5 times, then Pop 3 times </td>
+</tr>
+<tr class='summary'>
+<td colspan='7' class='summary'>
+<strong>SUMMARY FOR Test_Pop:</strong>
+0 out of 3 tests passed
+</td>
+</tr>
+<tr class='spacer'></tr>
+<tr class='fail'>
+<td class='test-set'> Test_IsEmpty </td>
+<td class='test'> Make sure IsEmpty is true for new SmartDynamicArray </td>
+<td class='prereq'> Push, Pop </td>
+<td class='result'> failed </td>
+<td class='expected'> IsEmpty() = 1<br> </td>
+<td class='actual'> IsEmpty() = 0<br> </td>
+<td class='comments'> Created empty SmartDynamicArray </td>
+</tr>
+<tr class='pass'>
+<td class='test-set'> Test_IsEmpty </td>
+<td class='test'> Make sure IsEmpty is false for SmartDynamicArray after push </td>
+<td class='prereq'> Push, Pop </td>
+<td class='result'> passed </td>
+<td class='expected'> IsEmpty() = 0<br> </td>
+<td class='actual'> IsEmpty() = 0<br> </td>
+<td class='comments'> Created empty SmartDynamicArray, Pushed 1 item </td>
+</tr>
+<tr class='pass'>
+<td class='test-set'> Test_IsEmpty </td>
+<td class='test'> Make sure IsEmpty is false for SmartDynamicArray after push </td>
+<td class='prereq'> Push, Pop </td>
+<td class='result'> passed </td>
+<td class='expected'> IsEmpty() = 0<br> </td>
+<td class='actual'> IsEmpty() = 0<br> </td>
+<td class='comments'> Created empty SmartDynamicArray, Pushed 2 item </td>
+</tr>
+<tr class='fail'>
+<td class='test-set'> Test_IsEmpty </td>
+<td class='test'> Make sure IsEmpty is true for SmartDynamicArray after push and pop </td>
+<td class='prereq'> Push, Pop </td>
+<td class='result'> failed </td>
+<td class='expected'> IsEmpty() = 1<br> </td>
+<td class='actual'> IsEmpty() = 0<br> </td>
+<td class='comments'> Created empty SmartDynamicArray, Pushed 2 items, Popped 2 items </td>
+</tr>
+<tr class='summary'>
+<td colspan='7' class='summary'>
+<strong>SUMMARY FOR Test_IsEmpty:</strong>
+2 out of 4 tests passed
+</td>
+</tr>
+<tr class='spacer'></tr>

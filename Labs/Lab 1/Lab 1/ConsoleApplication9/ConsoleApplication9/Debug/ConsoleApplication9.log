@@ -1,0 +1,6 @@
+﻿  Lab1Part3.cpp
+c:\users\charlene\desktop\consoleapplication9\consoleapplication9\lab1part3.cpp(10): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\users\charlene\desktop\consoleapplication9\consoleapplication9\lab1part3.cpp(11): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\users\charlene\desktop\consoleapplication9\consoleapplication9\lab1part3.cpp(12): warning C4305: 'argument': truncation from 'double' to 'float'
+  ConsoleApplication9.vcxproj -> C:\Users\Charlene\Desktop\ConsoleApplication9\Debug\ConsoleApplication9.exe
+  ConsoleApplication9.vcxproj -> C:\Users\Charlene\Desktop\ConsoleApplication9\Debug\ConsoleApplication9.pdb (Full PDB)

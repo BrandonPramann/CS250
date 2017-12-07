@@ -1,0 +1,57 @@
+# depslib dependency file v1.0
+1491417323 source:/home/rayechell/TEACHING/cs250/cs-250-private-files/Homework Projects 2017-01/Dictionary/main.cpp
+	<iostream>
+	<string>
+	<fstream>
+	"StudentTable.hpp"
+
+1491415545 /home/rayechell/TEACHING/cs250/cs-250-private-files/Homework Projects 2017-01/Dictionary/Dictionary.hpp
+	<string>
+	<iostream>
+	<vector>
+
+1491417351 source:/home/rayechell/TEACHING/cs250/cs-250-private-files/Homework Projects 2017-01/Dictionary/StudentTable.cpp
+	"StudentTable.hpp"
+	<iostream>
+	<string>
+	<fstream>
+
+1491417128 /home/rayechell/TEACHING/cs250/cs-250-private-files/Homework Projects 2017-01/Dictionary/StudentTable.hpp
+	<string>
+	<iostream>
+	<vector>
+
+1508602680 source:/home/rayechell/TEACHING/cs250/cs-250-private-files/Labs 2017-08/Lab 12 - Dictionary/Lab 12 - Dictionary/lab12_main.cpp
+	<iostream>
+	<string>
+	<fstream>
+	"lab12_StudentManager.hpp"
+
+1508601049 /home/rayechell/TEACHING/cs250/cs-250-private-files/Labs 2017-08/Lab 12 - Dictionary/Lab 12 - Dictionary/lab12_StudentTable.hpp
+	<string>
+	<iostream>
+	<vector>
+	"lab12_Student.hpp"
+
+1508601995 source:/home/rayechell/TEACHING/cs250/cs-250-private-files/Labs 2017-08/Lab 12 - Dictionary/Lab 12 - Dictionary/lab12_StudentTable.cpp
+	"lab12_StudentTable.hpp"
+	<iostream>
+	<string>
+	<fstream>
+
+1508601613 /home/rayechell/TEACHING/cs250/cs-250-private-files/Labs 2017-08/Lab 12 - Dictionary/Lab 12 - Dictionary/lab12_StudentManager.hpp
+	<string>
+	<vector>
+	<cstdlib>
+	<ctime>
+	"lab12_Student.hpp"
+
+1508600938 /home/rayechell/TEACHING/cs250/cs-250-private-files/Labs 2017-08/Lab 12 - Dictionary/Lab 12 - Dictionary/Student.hpp
+
+1508601671 source:/home/rayechell/TEACHING/cs250/cs-250-private-files/Labs 2017-08/Lab 12 - Dictionary/Lab 12 - Dictionary/lab12_StudentManager.cpp
+	"lab12_StudentManager.hpp"
+	<fstream>
+	"lab12_StudentTable.hpp"
+
+1508600938 /home/rayechell/TEACHING/cs250/cs-250-private-files/Labs 2017-08/Lab 12 - Dictionary/Lab 12 - Dictionary/lab12_Student.hpp
+

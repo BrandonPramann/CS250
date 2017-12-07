@@ -1,0 +1,22 @@
+﻿  lab3_main.cpp
+c:\users\charlene\desktop\consoleapplication14\consoleapplication14\lab5_tester.hpp(70): warning C4101: 'ex': unreferenced local variable
+c:\users\charlene\desktop\consoleapplication14\consoleapplication14\lab5_tester.hpp(122): warning C4101: 'ex': unreferenced local variable
+c:\users\charlene\desktop\consoleapplication14\consoleapplication14\lab5_tester.hpp(198): warning C4101: 'ex': unreferenced local variable
+c:\users\charlene\desktop\consoleapplication14\consoleapplication14\lab5_tester.hpp(213): warning C4101: 'ex': unreferenced local variable
+c:\users\charlene\desktop\consoleapplication14\consoleapplication14\lab5_tester.hpp(237): warning C4101: 'ex': unreferenced local variable
+c:\users\charlene\desktop\consoleapplication14\consoleapplication14\lab5_tester.hpp(285): warning C4101: 'ex': unreferenced local variable
+c:\users\charlene\desktop\consoleapplication14\consoleapplication14\lab5_tester.hpp(324): warning C4101: 'ex': unreferenced local variable
+c:\users\charlene\desktop\consoleapplication14\consoleapplication14\lab5_tester.hpp(409): warning C4101: 'ex': unreferenced local variable
+c:\users\charlene\desktop\consoleapplication14\consoleapplication14\lab5_tester.hpp(428): warning C4101: 'ex': unreferenced local variable
+c:\users\charlene\desktop\consoleapplication14\consoleapplication14\lab5_tester.hpp(444): warning C4101: 'ex': unreferenced local variable
+c:\users\charlene\desktop\consoleapplication14\consoleapplication14\lab5_tester.hpp(459): warning C4101: 'ex': unreferenced local variable
+c:\users\charlene\desktop\consoleapplication14\consoleapplication14\lab5_tester.hpp(534): warning C4101: 'ex': unreferenced local variable
+c:\users\charlene\desktop\consoleapplication14\consoleapplication14\lab5_tester.hpp(550): warning C4101: 'ex': unreferenced local variable
+c:\users\charlene\desktop\consoleapplication14\consoleapplication14\lab5_tester.hpp(570): warning C4101: 'ex': unreferenced local variable
+c:\users\charlene\desktop\consoleapplication14\consoleapplication14\lab5_tester.hpp(659): warning C4101: 'ex': unreferenced local variable
+c:\users\charlene\desktop\consoleapplication14\consoleapplication14\lab5_tester.hpp(781): warning C4101: 'ex': unreferenced local variable
+c:\users\charlene\desktop\consoleapplication14\consoleapplication14\lab5_tester.hpp(800): warning C4101: 'ex': unreferenced local variable
+  lab3_SmartStaticArray.cpp
+c:\users\charlene\desktop\consoleapplication14\consoleapplication14\lab3_smartstaticarray.cpp(33): error C2382: 'SmartStaticArray::Pop': redefinition; different exception specifications
+  c:\users\charlene\desktop\consoleapplication14\consoleapplication14\lab3_smartstaticarray.hpp(19): note: see declaration of 'SmartStaticArray::Pop'
+  Generating Code...
